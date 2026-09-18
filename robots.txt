@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /templates/
+Disallow: /data/unpublished
+
+Sitemap: https://www.historiasdeconexion.com/sitemap.xml
