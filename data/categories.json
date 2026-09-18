@@ -1,0 +1,38 @@
+[
+  {
+    "key": "historias",
+    "name": "Historias de la Vida Real",
+    "slug": "historias-de-la-vida-real",
+    "blurb": "Relatos íntimos sobre conexiones, silencios y lo que sentimos cuando alguien importa."
+  },
+  {
+    "key": "citas",
+    "name": "Consejos de Citas",
+    "slug": "consejos-de-citas",
+    "blurb": "Ideas prácticas para escribir, quedar y cuidar los límites sin perder la naturalidad."
+  },
+  {
+    "key": "pareja",
+    "name": "Metas de Pareja",
+    "slug": "metas-de-pareja",
+    "blurb": "Hábitos, confianza y conversaciones que ayudan a construir una relación más honesta."
+  },
+  {
+    "key": "noticias18",
+    "name": "Noticias 18+",
+    "slug": "noticias-18",
+    "blurb": "Información para adultos sobre cultura digital, plataformas y debates actuales."
+  },
+  {
+    "key": "tendencias",
+    "name": "Tendencias en Español",
+    "slug": "tendencias",
+    "blurb": "Temas que circulan hoy entre audiencias de habla hispana."
+  },
+  {
+    "key": "entretenimiento",
+    "name": "Entretenimiento y Frases",
+    "slug": "entretenimiento",
+    "blurb": "Citas, cultura popular y frases para guardar o compartir."
+  }
+]
