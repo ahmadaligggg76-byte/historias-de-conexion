@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
       --muted: #7c686d;
       --border: rgba(127,29,61,.12);
 
-      /* NUEVA PALETA */
+      /* NOVA PALETA */
       --accent: #9f1239;
       --accent2: #c2415c;
       --accent3: #d97706;
@@ -751,22 +751,22 @@
 <header>
   <div class="nav">
     <div class="brand">
-      <a href="/">Historias <span>de Conexión</span></a>
+      <a href="/">Histórias <span>de Conexão</span></a>
     </div>
     <div class="nav-actions">
-      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema" title="Cambiar tema">☾</button>
-      <button class="icon-btn" id="shareTop" aria-label="Compartir" title="Compartir">↗</button>
+      <button class="icon-btn" id="themeBtn" aria-label="Mudar tema" title="Mudar tema">☾</button>
+      <button class="icon-btn" id="shareTop" aria-label="Compartilhar" title="Compartilhar">↗</button>
     </div>
   </div>
 
 <div class="cat-bar">
-<a href="/">Inicio</a>
-<a href="/categoria/historias-de-la-vida-real/">Historias de la Vida Real</a>
-<a href="/categoria/consejos-de-citas/">Consejos de Citas</a>
-<a href="/categoria/metas-de-pareja/">Metas de Pareja</a>
-<a href="/categoria/noticias-18/">Noticias 18+</a>
-<a href="/categoria/tendencias/">Tendencias en Español</a>
-<a href="/categoria/entretenimiento/">Entretenimiento y Frases</a>
+<a href="/">Início</a>
+<a href="/categoria/historias-de-la-vida-real/">Histórias da Vida Real</a>
+<a href="/categoria/consejos-de-citas/">Dicas de Encontros</a>
+<a href="/categoria/metas-de-pareja/">Metas de Casal</a>
+<a href="/categoria/noticias-18/">Notícias 18+</a>
+<a href="/categoria/tendencias/">Tendências</a>
+<a href="/categoria/entretenimiento/">Entretenimento e Frases</a>
 </div>
 </header>
 <main>
@@ -788,7 +788,7 @@
 
 <div class="ad-wrap">
   <div class="ad-section ad-728">
-    <div class="ad-label">Contenido patrocinado</div>
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="wide-ad-scroll">
       <div class="ad-box">
         <script>
@@ -810,16 +810,16 @@
 <article id="story">
 {{ARTICLE_BODY}}
 <div class="end-card">
-  <h2>¿Te resuena esta historia?</h2>
+  <h2>Essa história mexeu com você?</h2>
   <p>{{END_CARD_TEXT}}</p>
-  <button class="share-btn" id="shareBtn">Compartir esta historia ↗</button>
+  <button class="share-btn" id="shareBtn">Compartilhar esta história ↗</button>
 </div>
 </article>
 </div>
 
 <div class="ad-wrap">
   <div class="ad-section ad-300">
-    <div class="ad-label">Contenido patrocinado</div>
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="ad-box">
       <script>
         atOptions = {
@@ -838,7 +838,7 @@
 
 <div class="ad-wrap">
   <div class="ad-section ad-728">
-    <div class="ad-label">Contenido patrocinado</div>
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="wide-ad-scroll">
       <div class="ad-box">
         <script>
@@ -858,20 +858,20 @@
 
 </main>
 <footer>
-  <div class="footer-brand">Historias de Conexión</div>
-  <div>Historias sobre relaciones, encuentros, emociones y conexiones humanas.</div>
+  <div class="footer-brand">Histórias de Conexão</div>
+  <div>Histórias sobre relacionamentos, encontros, emoções e conexões humanas.</div>
   <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/#privacy">Privacidad</a>
-    <a href="/#contact">Contacto</a>
+    <a href="/">Início</a>
+    <a href="/#privacy">Privacidade</a>
+    <a href="/#contact">Contato</a>
   </div>
-  <div>© 2026 Historias de Conexión. Todos los derechos reservados.</div>
+  <div>© 2026 Histórias de Conexão. Todos os direitos reservados.</div>
 </footer>
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text"><strong>🍪 Tu privacidad importa.</strong><br>Utilizamos cookies y tecnologías similares para mejorar tu experiencia.</div>
-  <button class="cookie-btn" id="cookieAccept">Aceptar</button>
+  <div class="cookie-text"><strong>🍪 Sua privacidade importa.</strong><br>Utilizamos cookies e tecnologias semelhantes para melhorar sua experiência.</div>
+  <button class="cookie-btn" id="cookieAccept">Aceitar</button>
 </div>
-<button id="topBtn" aria-label="Volver arriba">↑</button>
+<button id="topBtn" aria-label="Voltar ao topo">↑</button>
 
 <script>
 
@@ -977,10 +977,10 @@
     const shareData = {
 
       title:
-        "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos",
+        "{{SEO_TITLE}}",
 
       text:
-        "Una historia sobre mensajes, dudas e inseguridades cuando alguien tarda en responder.",
+        "{{SEO_DESCRIPTION}}",
 
       url:
         window.location.href
@@ -1003,13 +1003,13 @@
         );
 
         alert(
-          "Enlace copiado."
+          "Link copiado."
         );
 
       } else {
 
         alert(
-          "Copia el enlace de esta página para compartirla."
+          "Copie o link desta página para compartilhar."
         );
 
       }
