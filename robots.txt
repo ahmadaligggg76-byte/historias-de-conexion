@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /templates/
 Disallow: /data/unpublished
-
-Sitemap: https://www.historiasdeconexion.com/sitemap.xml
+Sitemap: https://historias-de-conexion-omega.vercel.app/sitemap.xml
