@@ -802,10 +802,70 @@
       font: 14.5px/1.75 Arial, sans-serif;
       color: var(--muted);
     }
+
+    .breadcrumb {
+      margin: 14px 0 0;
+      font: 12.5px/1.6 Arial, sans-serif;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    .follow-google {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font: 13px/1.5 Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .related { margin: 40px 0 10px; }
+    .related h2 {
+      font-size: 22px;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    .related-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .related-card div { padding: 12px 14px; }
+    .related-card strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .related-card small { color: var(--muted); font-size: 12px; }
   </style>
 
   <title>Frases e Crônicas de Amor e Paquera com Alma Brasileira</title>
   <meta name="description" content="Descubra frases originais, mini-contos românticos e jogos de paquera com o puro borogodó brasileiro. Ideal para compartilhar e encantar.">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preload" as="image" href="https://i.ibb.co/8L9nFMzD/file.jpg" fetchpriority="high">
   <link rel="canonical" href="https://historias-de-conexion-omega.vercel.app/articulo/manual-do-amor-tropical-dengo-e-humor/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Frases e Crônicas de Amor e Paquera com Alma Brasileira">
@@ -814,8 +874,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://i.ibb.co/8L9nFMzD/file.jpg">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Frases e Crônicas de Amor e Paquera com Alma Brasileira", "description": "Descubra frases originais, mini-contos românticos e jogos de paquera com o puro borogodó brasileiro. Ideal para compartilhar e encantar.", "image": "https://i.ibb.co/8L9nFMzD/file.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/manual-do-amor-tropical-dengo-e-humor/", "datePublished": "2026-09-21"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é xaveco de padaria?", "acceptedAnswer": {"@type": "Answer", "text": "É a arte de flertar com leveza na fila do pão, sem cantadas prontas nem pressão. O manual conta o caso de Rafael, que conquistou a moça do misto quente levando um pingado extra e dizendo que “segunda-feira sem café duplo é crueldade”. A técnica: gentileza pequena, sorriso e uma pontada de humor — sinceridade vence qualquer frase decorada."}}, {"@type": "Question", "name": "O que significa “dengo” no forró?", "acceptedAnswer": {"@type": "Answer", "text": "Dengo é fazer charme sem pressa: um olhar demorado, a mão que descansa um segundo a mais no ombro, um elogio dito baixinho no xote. No forró, onde dançar juntinho é permitido, o dengo vira linguagem. O artigo conta como Mariana conheceu o marido em Campina Grande: ele pisou no pé dela no baião e ganhou o telefone pela honestidade."}}, {"@type": "Question", "name": "O que é “borogodó” no amor brasileiro?", "acceptedAnswer": {"@type": "Answer", "text": "Borogodó é aquela mistura brasileira de charme, coragem e cara de pau que transforma um “oi” tímido numa história para contar aos netos. É o tempero do amor tropical: não vem de manual importado, vem da desenvoltura de quem encara a paquera. Ter borogodó é saber rir, improvisar e tratar o flerte como brincadeira, não como prova de fogo."}}, {"@type": "Question", "name": "Quais frases de amor do manual posso mandar no WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "O artigo traz frases curtas e originais prontas para copiar, como “Se o seu sorriso fosse pão de queijo, eu ia querer uma fornada inteira só para mim” e “Com você, até segunda-feira tem gosto de domingo”. Há também frases de forró e coringas para qualquer ocasião — todas feitas para compartilhar e arrancar sorrisos."}}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Frases e Crônicas de Amor e Paquera com Alma Brasileira", "description": "Descubra frases originais, mini-contos românticos e jogos de paquera com o puro borogodó brasileiro. Ideal para compartilhar e encantar.", "image": "https://i.ibb.co/8L9nFMzD/file.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão", "url": "https://historias-de-conexion-omega.vercel.app/equipe/"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/manual-do-amor-tropical-dengo-e-humor/", "datePublished": "2026-09-21"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://historias-de-conexion-omega.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Entretenimento e Frases", "item": "https://historias-de-conexion-omega.vercel.app/categoria/entretenimiento/"}, {"@type": "ListItem", "position": 3, "name": "Frases e Crônicas de Amor e Paquera com Alma Brasileira"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é xaveco de padaria?", "acceptedAnswer": {"@type": "Answer", "text": "É a arte de flertar com leveza na fila do pão, sem cantadas prontas nem pressão. O manual conta o caso de Rafael, que conquistou a moça do misto quente levando um pingado extra e dizendo que “segunda-feira sem café duplo é crueldade”. A técnica: gentileza pequena, sorriso e uma pontada de humor — sinceridade vence qualquer frase decorada."}}, {"@type": "Question", "name": "O que significa “dengo” no forró?", "acceptedAnswer": {"@type": "Answer", "text": "Dengo é fazer charme sem pressa: um olhar demorado, a mão que descansa um segundo a mais no ombro, um elogio dito baixinho no xote. No forró, onde dançar juntinho é permitido, o dengo vira linguagem. O artigo conta como Mariana conheceu o marido em Campina Grande: ele pisou no pé dela no baião e ganhou o telefone pela honestidade."}}, {"@type": "Question", "name": "O que é “borogodó” no amor brasileiro?", "acceptedAnswer": {"@type": "Answer", "text": "Borogodó é aquela mistura brasileira de charme, coragem e cara de pau que transforma um “oi” tímido numa história para contar aos netos. É o tempero do amor tropical: não vem de manual importado, vem da desenvoltura de quem encara a paquera. Ter borogodó é saber rir, improvisar e tratar o flerte como brincadeira, não como prova de fogo."}}, {"@type": "Question", "name": "Quais frases de amor do manual posso mandar no WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "O artigo traz frases curtas e originais prontas para copiar, como “Se o seu sorriso fosse pão de queijo, eu ia querer uma fornada inteira só para mim” e “Com você, até segunda-feira tem gosto de domingo”. Há também frases de forró e coringas para qualquer ocasião — todas feitas para compartilhar e arrancar sorrisos."}}]}]}
 </script>
+<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 <body>
 <div id="progress"></div>
@@ -848,11 +909,15 @@
   <div class="story-meta">
     <span class="meta-pill">♥ Entretenimento e Frases</span>
     <span class="meta-pill">21 de set. de 2026</span>
+    <span class="meta-pill">✍️ Por <a href="/equipe/" style="color:inherit;text-decoration:underline">Equipe Histórias de Conexão</a></span>
   </div>
+  <nav class="breadcrumb" aria-label="Navegação">
+    <a href="/">Início</a> <span>›</span> <a href="/categoria/entretenimiento/">Entretenimento e Frases</a> <span>›</span> <span>Manual do Amor Tropical: Do Xaveco de Padaria ao Dengo no Forró</span>
+  </nav>
 </section>
 <div class="hero-image-wrap">
   <div class="hero-image">
-    <img src="https://i.ibb.co/8L9nFMzD/file.jpg" alt="Um casal dançando forró de forma aconchegante sob luzes quentes de uma festa popular brasileira." width="1200" height="630" loading="eager">
+    <img src="https://i.ibb.co/8L9nFMzD/file.jpg" alt="Um casal dançando forró de forma aconchegante sob luzes quentes de uma festa popular brasileira." width="1200" height="630" loading="eager" fetchpriority="high">
   </div>
   <div class="image-caption">Um casal dançando forró de forma aconchegante sob as luzes quentes de uma festa popular brasileira.</div>
 </div>
@@ -908,7 +973,19 @@
   <h2>Essa história mexeu com você?</h2>
   <p>Gostou de alguma frase? Compartilhe com aquela pessoa especial — todo dengo começa com um oi.</p>
   <button class="share-btn" id="shareBtn">Compartilhar esta história ↗</button>
+  <div class="follow-google">
+    <span>Siga o Histórias de Conexão no Google</span>
+    <div google-add-preferred-source-btn></div>
+  </div>
 </div>
+<section class="related" id="relatedSection" aria-label="Continue lendo">
+  <h2>Continue lendo</h2>
+  <div class="related-grid">
+<a class="related-card" href="/articulo/o-segredo-obscuro-dos-algoritmos-de-namoro/"><img src="https://i.ibb.co/ksdqqjT3/file.jpg" alt="O Segredo dos Algoritmos de Namoro e a Solidão Digital" loading="lazy" width="640" height="360"><div><small>Notícias 18+</small><strong>O segredo obscuro dos algoritmos de namoro que ninguém te conta (e como eles lucram com sua solidão)</strong></div></a>
+<a class="related-card" href="/articulo/o-renascimento-da-roda-pagode-de-quintal-tendencia/"><img src="https://i.ibb.co/wrcJQPjc/file.jpg" alt="A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil" loading="lazy" width="640" height="360"><div><small>Tendências</small><strong>O Renascimento da Roda: Por que o 'Pagode de Quintal' Virou o Novo Luxo Brasileiro</strong></div></a>
+<a class="related-card" href="/articulo/el-lenguaje-secreto-de-los-balcones/"><img src="https://i.ibb.co/zHbPwssP/file.jpg" alt="A linguagem secreta das varandas: história real de conexão" loading="lazy" width="640" height="360"><div><small>Histórias da Vida Real</small><strong>A linguagem secreta das varandas</strong></div></a>
+  </div>
+</section>
 </article>
 </div>
 

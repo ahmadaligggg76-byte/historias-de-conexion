@@ -802,10 +802,70 @@
       font: 14.5px/1.75 Arial, sans-serif;
       color: var(--muted);
     }
+
+    .breadcrumb {
+      margin: 14px 0 0;
+      font: 12.5px/1.6 Arial, sans-serif;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    .follow-google {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font: 13px/1.5 Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .related { margin: 40px 0 10px; }
+    .related h2 {
+      font-size: 22px;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    .related-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .related-card div { padding: 12px 14px; }
+    .related-card strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .related-card small { color: var(--muted); font-size: 12px; }
   </style>
 
   <title>{{SEO_TITLE}}</title>
   <meta name="description" content="{{SEO_DESCRIPTION}}">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preload" as="image" href="{{HERO_IMAGE}}" fetchpriority="high">
   <link rel="canonical" href="{{CANONICAL}}">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{{SEO_TITLE}}">
@@ -816,6 +876,7 @@
 <script type="application/ld+json">
 {{JSON_LD_ARTICLE}}
 </script>
+<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 <body>
 <div id="progress"></div>
@@ -848,11 +909,15 @@
   <div class="story-meta">
     <span class="meta-pill">♥ {{CATEGORY_NAME}}</span>
     <span class="meta-pill">{{DATE_DISPLAY}}</span>
+    <span class="meta-pill">✍️ Por <a href="/equipe/" style="color:inherit;text-decoration:underline">Equipe Histórias de Conexão</a></span>
   </div>
+  <nav class="breadcrumb" aria-label="Navegação">
+    <a href="/">Início</a> <span>›</span> <a href="/categoria/{{CATEGORY_SLUG}}/">{{CATEGORY_NAME}}</a> <span>›</span> <span>{{TITLE}}</span>
+  </nav>
 </section>
 <div class="hero-image-wrap">
   <div class="hero-image">
-    <img src="{{HERO_IMAGE}}" alt="{{HERO_ALT}}" width="1200" height="630" loading="eager">
+    <img src="{{HERO_IMAGE}}" alt="{{HERO_ALT}}" width="1200" height="630" loading="eager" fetchpriority="high">
   </div>
   <div class="image-caption">{{HERO_CAPTION}}</div>
 </div>
@@ -893,7 +958,17 @@
   <h2>Essa história mexeu com você?</h2>
   <p>{{END_CARD_TEXT}}</p>
   <button class="share-btn" id="shareBtn">Compartilhar esta história ↗</button>
+  <div class="follow-google">
+    <span>Siga o Histórias de Conexão no Google</span>
+    <div google-add-preferred-source-btn></div>
+  </div>
 </div>
+<section class="related" id="relatedSection" aria-label="Continue lendo">
+  <h2>Continue lendo</h2>
+  <div class="related-grid">
+{{RELATED_HTML}}
+  </div>
+</section>
 </article>
 </div>
 

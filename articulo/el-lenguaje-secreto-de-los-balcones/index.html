@@ -803,9 +803,72 @@
       color: var(--muted);
     }
 
+
+    /* =========================
+       2026 audit: breadcrumb + related + follow
+    ========================= */
+    .breadcrumb {
+      margin: 14px 0 0;
+      font: 12.5px/1.6 Arial, sans-serif;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    .follow-google {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font: 13px/1.5 Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .related { margin: 40px 0 10px; }
+    .related h2 {
+      font-size: 22px;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    .related-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .related-card div { padding: 12px 14px; }
+    .related-card strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .related-card small { color: var(--muted); font-size: 12px; }
+
   </style>
 
   <title>A linguagem secreta das varandas: história real de conexão | Histórias de Conexão</title>
+  <meta name="robots" content="max-image-preview:large">
   <meta name="description" content="Uma história emocionante sobre dois vizinhos que encontram uma conexão profunda através de plantas e bilhetes anônimos em um prédio na cidade.">
   <link rel="canonical" href="https://historias-de-conexion-omega.vercel.app/articulo/el-lenguaje-secreto-de-los-balcones/">
   <meta property="og:type" content="article">
@@ -816,8 +879,10 @@
   <meta name="twitter:image" content="https://i.ibb.co/zHbPwssP/file.jpg">
 
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "A linguagem secreta das varandas: história real de conexão", "description": "Uma história emocionante sobre dois vizinhos que encontram uma conexão profunda através de plantas e bilhetes anônimos em um prédio na cidade.", "image": "https://i.ibb.co/zHbPwssP/file.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/el-lenguaje-secreto-de-los-balcones/", "datePublished": "2026-09-21"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qual é a história de “A linguagem secreta das varandas”?", "acceptedAnswer": {"@type": "Answer", "text": "É o relato de um morador solitário que passa a regar a planta esquecida da varanda vizinha e inicia uma amizade por bilhetes com Elena. Durante meses eles trocam plantas, dicas e confidências pelo vão entre as varandas. O encontro acontece num sábado de manhã, regado a café e silêncio — e mostra que conexão não precisa de pressa."}}, {"@type": "Question", "name": "O que o artigo ensina sobre solidão nos grandes centros?", "acceptedAnswer": {"@type": "Answer", "text": "Que a solidão urbana é uma questão de coragem, não de oportunidade: moramos colados uns nos outros e não nos conhecemos. A história mostra que pequenos gestos — regar uma planta, deixar um bilhete — podem romper o isolamento melhor que tecnologia. Cuidar do que o outro esqueceu por cansaço, diz o texto, é dizer “eu vejo você” sem palavras."}}, {"@type": "Question", "name": "Quem é Elena na história das varandas?", "acceptedAnswer": {"@type": "Answer", "text": "Elena é a vizinha do apartamento 4C, uma mulher de sessenta anos que trabalha em turnos duplos num hospital e vivia o luto pela mãe. Sem forças para cuidar da varanda, ela achou nos bilhetes um refúgio sem pressão. Com um sorriso que “recuperava seu lugar no rosto”, ela resume tudo: “Fazia tempo que ninguém me via de verdade”."}}, {"@type": "Question", "name": "Como fazer amizade com um vizinho que você nunca viu?", "acceptedAnswer": {"@type": "Answer", "text": "A história sugere começar pequeno e sem invadir: um gesto de cuidado, um bilhete gentil, uma dica útil. Respeite o ritmo do outro — o narrador não bateu à porta, só deixou recados para Elena responder no tempo dela. Um “projeto em comum”, como o jardim entre as varandas, dá pretexto para a conversa florescer sem pressa."}}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "A linguagem secreta das varandas: história real de conexão", "description": "Uma história emocionante sobre dois vizinhos que encontram uma conexão profunda através de plantas e bilhetes anônimos em um prédio na cidade.", "image": "https://i.ibb.co/zHbPwssP/file.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão", "url": "https://historias-de-conexion-omega.vercel.app/equipe/"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/el-lenguaje-secreto-de-los-balcones/", "datePublished": "2026-09-21"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://historias-de-conexion-omega.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Histórias da Vida Real", "item": "https://historias-de-conexion-omega.vercel.app/categoria/historias-de-la-vida-real/"}, {"@type": "ListItem", "position": 3, "name": "A linguagem secreta das varandas: história real de conexão"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qual é a história de “A linguagem secreta das varandas”?", "acceptedAnswer": {"@type": "Answer", "text": "É o relato de um morador solitário que passa a regar a planta esquecida da varanda vizinha e inicia uma amizade por bilhetes com Elena. Durante meses eles trocam plantas, dicas e confidências pelo vão entre as varandas. O encontro acontece num sábado de manhã, regado a café e silêncio — e mostra que conexão não precisa de pressa."}}, {"@type": "Question", "name": "O que o artigo ensina sobre solidão nos grandes centros?", "acceptedAnswer": {"@type": "Answer", "text": "Que a solidão urbana é uma questão de coragem, não de oportunidade: moramos colados uns nos outros e não nos conhecemos. A história mostra que pequenos gestos — regar uma planta, deixar um bilhete — podem romper o isolamento melhor que tecnologia. Cuidar do que o outro esqueceu por cansaço, diz o texto, é dizer “eu vejo você” sem palavras."}}, {"@type": "Question", "name": "Quem é Elena na história das varandas?", "acceptedAnswer": {"@type": "Answer", "text": "Elena é a vizinha do apartamento 4C, uma mulher de sessenta anos que trabalha em turnos duplos num hospital e vivia o luto pela mãe. Sem forças para cuidar da varanda, ela achou nos bilhetes um refúgio sem pressão. Com um sorriso que “recuperava seu lugar no rosto”, ela resume tudo: “Fazia tempo que ninguém me via de verdade”."}}, {"@type": "Question", "name": "Como fazer amizade com um vizinho que você nunca viu?", "acceptedAnswer": {"@type": "Answer", "text": "A história sugere começar pequeno e sem invadir: um gesto de cuidado, um bilhete gentil, uma dica útil. Respeite o ritmo do outro — o narrador não bateu à porta, só deixou recados para Elena responder no tempo dela. Um “projeto em comum”, como o jardim entre as varandas, dá pretexto para a conversa florescer sem pressa."}}]}]}
 </script>
+<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+<link rel="preload" as="image" href="https://i.ibb.co/zHbPwssP/file.jpg" fetchpriority="high">
 </head>
 <body>
 <div id="progress"></div>
@@ -850,7 +915,12 @@
   <div class="story-meta">
     <span class="meta-pill">♥ Histórias da Vida Real</span>
     <span class="meta-pill">21 de set. de 2026</span>
+  
+    <span class="meta-pill">✍️ Por <a href="/equipe/" style="color:inherit;text-decoration:underline">Equipe Histórias de Conexão</a></span>
   </div>
+  <nav class="breadcrumb" aria-label="Navegação">
+    <a href="/">Início</a> <span>›</span> <a href="/categoria/historias-de-la-vida-real/">Histórias da Vida Real</a> <span>›</span> <span>A linguagem secreta das varandas: história real de conexão</span>
+  </nav>
 </section>
 <div class="hero-image-wrap">
   <div class="hero-image">
@@ -910,8 +980,20 @@
   <h2>Essa história tocou você?</h2>
   <p>Às vezes, as conexões mais fortes são as que crescem nos cantos mais inesperados.</p>
   <button class="share-btn" id="shareBtn">Compartilhar esta história ↗</button>
+  <div class="follow-google">
+    <span>Siga o Histórias de Conexão no Google</span>
+    <div google-add-preferred-source-btn></div>
+  </div>
 </div>
 </article>
+<section class="related" id="relatedSection" aria-label="Continue lendo">
+  <h2>Continue lendo</h2>
+  <div class="related-grid">
+<a class="related-card" href="/articulo/le-escribi-estas-bien/"><img src="/images/valeria-story.jpg" alt="Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão" loading="lazy" width="640" height="360"><div><small>Histórias da Vida Real</small><strong>Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos</strong></div></a>
+<a class="related-card" href="/articulo/o-segredo-obscuro-dos-algoritmos-de-namoro/"><img src="https://i.ibb.co/ksdqqjT3/file.jpg" alt="O Segredo dos Algoritmos de Namoro e a Solidão Digital" loading="lazy" width="640" height="360"><div><small>Notícias 18+</small><strong>O segredo obscuro dos algoritmos de namoro que ninguém te conta (e como eles lucram com sua solidão)</strong></div></a>
+<a class="related-card" href="/articulo/o-renascimento-da-roda-pagode-de-quintal-tendencia/"><img src="https://i.ibb.co/wrcJQPjc/file.jpg" alt="A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil" loading="lazy" width="640" height="360"><div><small>Tendências</small><strong>O Renascimento da Roda: Por que o 'Pagode de Quintal' Virou o Novo Luxo Brasileiro</strong></div></a>
+  </div>
+</section>
 </div>
 
 <div class="ad-wrap">

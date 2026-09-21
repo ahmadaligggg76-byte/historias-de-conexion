@@ -6,6 +6,7 @@
 
   <title>Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexião</title>
 
+  <meta name="robots" content="max-image-preview:large">
   <meta name="description" content="Uma história sobre mensagens, dúvidas, inseguranças e aprender que o silêncio de alguém pode significar muitas coisas.">
   <meta name="theme-color" content="#7f1d3d">
 
@@ -821,11 +822,74 @@
       color: var(--muted);
     }
 
+
+    /* =========================
+       2026 audit: breadcrumb + related + follow
+    ========================= */
+    .breadcrumb {
+      margin: 14px 0 0;
+      font: 12.5px/1.6 Arial, sans-serif;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    .follow-google {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font: 13px/1.5 Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .related { margin: 40px 0 10px; }
+    .related h2 {
+      font-size: 22px;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    .related-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .related-card div { padding: 12px 14px; }
+    .related-card strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .related-card small { color: var(--muted); font-size: 12px; }
+
   </style>
 
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão", "description": "Uma história sobre mensagens, dúvidas, inseguranças e aprender que o silêncio de alguém pode significar muitas coisas.", "image": "/images/valeria-story.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/le-escribi-estas-bien/", "datePublished": "2026-09-09"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que fazer quando a pessoa demora para responder no WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Primeiro, respire: o silêncio pode significar desinteresse, mas também cansaço, trabalho ou alguém buscando as palavras certas. O artigo mostra como a ansiedade transforma horas sem resposta numa “despedida que nunca aconteceu”. Pergunte-se: “eu sei o que está acontecendo ou estou preenchendo o silêncio com meus medos?”. Se a demora virar padrão, uma conversa honesta vale mais que mensagens ansiosas."}}, {"@type": "Question", "name": "Por que a demora para responder dói tanto quando gostamos de alguém?", "acceptedAnswer": {"@type": "Answer", "text": "Porque não sentimos falta só da mensagem — sentimos falta da sensação de ver aquele nome. Quando alguém ganha lugar no nosso dia, cada hora de silêncio parece uma rejeição, e a mente preenche o vazio com o pior. O texto lembra: cinco minutos podem parecer uma hora quando o coração escolheu, mas sentimento não transforma suposição em fato."}}, {"@type": "Question", "name": "Como foi o primeiro encontro do casal da história?", "acceptedAnswer": {"@type": "Answer", "text": "Simples e sem roteiro: café, caminhada, muitas risadas e alguns silêncios confortáveis. Aconteceu uma semana depois da conversa honesta em que ela confessou o medo de se envolver após um relacionamento complicado. Na despedida, ela brincou: “Você vai ficar olhando o celular a cada cinco minutos agora?” — e ele riu: “Provavelmente”. Um começo imperfeito, mas verdadeiro."}}, {"@type": "Question", "name": "Qual é a lição principal do artigo “Você está bem?”?", "acceptedAnswer": {"@type": "Answer", "text": "Que devemos deixar a história ser escrita com fatos, não com medos: o silêncio de alguém tem muitos significados, e inventar respostas machuca a gente. O caminho é esperar sem exigir, sentir sem cobrar e conversar em vez de supor. Diz o narrador: “o silêncio não é uma resposta — e até a outra pessoa falar, o resto são possibilidades”."}}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão", "description": "Uma história sobre mensagens, dúvidas, inseguranças e aprender que o silêncio de alguém pode significar muitas coisas.", "image": "/images/valeria-story.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão", "url": "https://historias-de-conexion-omega.vercel.app/equipe/"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/le-escribi-estas-bien/", "datePublished": "2026-09-09"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://historias-de-conexion-omega.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Histórias da Vida Real", "item": "https://historias-de-conexion-omega.vercel.app/categoria/historias-de-la-vida-real/"}, {"@type": "ListItem", "position": 3, "name": "Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que fazer quando a pessoa demora para responder no WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Primeiro, respire: o silêncio pode significar desinteresse, mas também cansaço, trabalho ou alguém buscando as palavras certas. O artigo mostra como a ansiedade transforma horas sem resposta numa “despedida que nunca aconteceu”. Pergunte-se: “eu sei o que está acontecendo ou estou preenchendo o silêncio com meus medos?”. Se a demora virar padrão, uma conversa honesta vale mais que mensagens ansiosas."}}, {"@type": "Question", "name": "Por que a demora para responder dói tanto quando gostamos de alguém?", "acceptedAnswer": {"@type": "Answer", "text": "Porque não sentimos falta só da mensagem — sentimos falta da sensação de ver aquele nome. Quando alguém ganha lugar no nosso dia, cada hora de silêncio parece uma rejeição, e a mente preenche o vazio com o pior. O texto lembra: cinco minutos podem parecer uma hora quando o coração escolheu, mas sentimento não transforma suposição em fato."}}, {"@type": "Question", "name": "Como foi o primeiro encontro do casal da história?", "acceptedAnswer": {"@type": "Answer", "text": "Simples e sem roteiro: café, caminhada, muitas risadas e alguns silêncios confortáveis. Aconteceu uma semana depois da conversa honesta em que ela confessou o medo de se envolver após um relacionamento complicado. Na despedida, ela brincou: “Você vai ficar olhando o celular a cada cinco minutos agora?” — e ele riu: “Provavelmente”. Um começo imperfeito, mas verdadeiro."}}, {"@type": "Question", "name": "Qual é a lição principal do artigo “Você está bem?”?", "acceptedAnswer": {"@type": "Answer", "text": "Que devemos deixar a história ser escrita com fatos, não com medos: o silêncio de alguém tem muitos significados, e inventar respostas machuca a gente. O caminho é esperar sem exigir, sentir sem cobrar e conversar em vez de supor. Diz o narrador: “o silêncio não é uma resposta — e até a outra pessoa falar, o resto são possibilidades”."}}]}]}
 </script>
+<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 
 <body>
@@ -892,7 +956,12 @@
     <span class="meta-pill">♥ Relaciones</span>
     <span class="meta-pill">◷ Experiencia personal</span>
     <span class="meta-pill">Conexiones</span>
+  
+    <span class="meta-pill">✍️ Por <a href="/equipe/" style="color:inherit;text-decoration:underline">Equipe Histórias de Conexão</a></span>
   </div>
+  <nav class="breadcrumb" aria-label="Navegação">
+    <a href="/">Início</a> <span>›</span> <a href="/categoria/historias-de-la-vida-real/">Histórias da Vida Real</a> <span>›</span> <span>Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão</span>
+  </nav>
 
 </section>
 
@@ -1811,10 +1880,22 @@ A primeira vez que pensei que algo estava errado, tinha acabado de olhar o celul
   <button class="share-btn" id="shareBtn">
     Compartilhar esta história ↗
   </button>
+  <div class="follow-google">
+    <span>Siga o Histórias de Conexão no Google</span>
+    <div google-add-preferred-source-btn></div>
+  </div>
 
 </div>
 
 </article>
+<section class="related" id="relatedSection" aria-label="Continue lendo">
+  <h2>Continue lendo</h2>
+  <div class="related-grid">
+<a class="related-card" href="/articulo/el-lenguaje-secreto-de-los-balcones/"><img src="https://i.ibb.co/zHbPwssP/file.jpg" alt="A linguagem secreta das varandas: história real de conexão" loading="lazy" width="640" height="360"><div><small>Histórias da Vida Real</small><strong>A linguagem secreta das varandas</strong></div></a>
+<a class="related-card" href="/articulo/o-segredo-obscuro-dos-algoritmos-de-namoro/"><img src="https://i.ibb.co/ksdqqjT3/file.jpg" alt="O Segredo dos Algoritmos de Namoro e a Solidão Digital" loading="lazy" width="640" height="360"><div><small>Notícias 18+</small><strong>O segredo obscuro dos algoritmos de namoro que ninguém te conta (e como eles lucram com sua solidão)</strong></div></a>
+<a class="related-card" href="/articulo/o-renascimento-da-roda-pagode-de-quintal-tendencia/"><img src="https://i.ibb.co/wrcJQPjc/file.jpg" alt="A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil" loading="lazy" width="640" height="360"><div><small>Tendências</small><strong>O Renascimento da Roda: Por que o 'Pagode de Quintal' Virou o Novo Luxo Brasileiro</strong></div></a>
+  </div>
+</section>
 
 </div>
 

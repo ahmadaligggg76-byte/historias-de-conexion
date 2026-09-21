@@ -802,10 +802,70 @@
       font: 14.5px/1.75 Arial, sans-serif;
       color: var(--muted);
     }
+
+    .breadcrumb {
+      margin: 14px 0 0;
+      font: 12.5px/1.6 Arial, sans-serif;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    .follow-google {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font: 13px/1.5 Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .related { margin: 40px 0 10px; }
+    .related h2 {
+      font-size: 22px;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    .related-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .related-card div { padding: 12px 14px; }
+    .related-card strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .related-card small { color: var(--muted); font-size: 12px; }
   </style>
 
   <title>A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil</title>
   <meta name="description" content="Descubra por que a 'resenha' e o pagode de quintal se tornaram a maior tendência de lifestyle no Brasil, unindo nostalgia dos anos 90 e busca por conexão real.">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preload" as="image" href="https://i.ibb.co/wrcJQPjc/file.jpg" fetchpriority="high">
   <link rel="canonical" href="https://historias-de-conexion-omega.vercel.app/articulo/o-renascimento-da-roda-pagode-de-quintal-tendencia/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil">
@@ -814,8 +874,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://i.ibb.co/wrcJQPjc/file.jpg">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil", "description": "Descubra por que a 'resenha' e o pagode de quintal se tornaram a maior tendência de lifestyle no Brasil, unindo nostalgia dos anos 90 e busca por conexão real.", "image": "https://i.ibb.co/wrcJQPjc/file.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/o-renascimento-da-roda-pagode-de-quintal-tendencia/", "datePublished": "2026-09-21"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é pagode de quintal?", "acceptedAnswer": {"@type": "Answer", "text": "É uma roda de samba informal feita no quintal de casa, com instrumentos simples como pandeiro, tantan e reco-reco, cadeiras de plástico, churrasco e cerveja em copo americano. Diferente de um show pago, não tem palco nem ingresso: qualquer pessoa pode chegar, cantar junto e participar. Virou símbolo de um estilo de vida que valoriza a presença e a convivência."}}, {"@type": "Question", "name": "Por que o pagode de quintal virou tendência no Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "Porque ele responde a uma carência real: a solidão em meio à hiperconexão digital. Numa época de telas e interações superficiais, o quintal oferece o oposto — gente de verdade, sem filtro e sem pressa. Soma-se a isso a nostalgia dos anos 90, a estética do improviso que viralizou nas redes e o custo baixo: felicidade sem gastar uma fortuna."}}, {"@type": "Question", "name": "O que significa “resenha” na cultura do pagode?", "acceptedAnswer": {"@type": "Answer", "text": "Resenha é mais que festa: é a conversa honesta que acontece na roda, geralmente quando a música baixa e restam os resistentes em volta da brasa. É ali que estranhos viram amigos, conselhos circulam e histórias são contadas. O artigo a descreve como uma terapia em grupo brasileira — sem divã, sem conta no final, só afeto e presença."}}, {"@type": "Question", "name": "O que é o copo americano e por que ele virou símbolo do pagode?", "acceptedAnswer": {"@type": "Answer", "text": "O copo americano é aquele copo pequeno, barato e quase indestrutível presente em quase toda casa brasileira. No pagode de quintal, ele virou o “cálice do novo luxo” porque representa inclusão: serve cerveja, refrigerante e caipirinha para todo mundo, sem cerimônia. Enquanto o luxo tradicional exclui, o luxo do quintal inclui — quanto mais gente, mais valiosa a roda fica."}}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil", "description": "Descubra por que a 'resenha' e o pagode de quintal se tornaram a maior tendência de lifestyle no Brasil, unindo nostalgia dos anos 90 e busca por conexão real.", "image": "https://i.ibb.co/wrcJQPjc/file.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão", "url": "https://historias-de-conexion-omega.vercel.app/equipe/"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/o-renascimento-da-roda-pagode-de-quintal-tendencia/", "datePublished": "2026-09-21"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://historias-de-conexion-omega.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Tendências", "item": "https://historias-de-conexion-omega.vercel.app/categoria/tendencias/"}, {"@type": "ListItem", "position": 3, "name": "A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é pagode de quintal?", "acceptedAnswer": {"@type": "Answer", "text": "É uma roda de samba informal feita no quintal de casa, com instrumentos simples como pandeiro, tantan e reco-reco, cadeiras de plástico, churrasco e cerveja em copo americano. Diferente de um show pago, não tem palco nem ingresso: qualquer pessoa pode chegar, cantar junto e participar. Virou símbolo de um estilo de vida que valoriza a presença e a convivência."}}, {"@type": "Question", "name": "Por que o pagode de quintal virou tendência no Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "Porque ele responde a uma carência real: a solidão em meio à hiperconexão digital. Numa época de telas e interações superficiais, o quintal oferece o oposto — gente de verdade, sem filtro e sem pressa. Soma-se a isso a nostalgia dos anos 90, a estética do improviso que viralizou nas redes e o custo baixo: felicidade sem gastar uma fortuna."}}, {"@type": "Question", "name": "O que significa “resenha” na cultura do pagode?", "acceptedAnswer": {"@type": "Answer", "text": "Resenha é mais que festa: é a conversa honesta que acontece na roda, geralmente quando a música baixa e restam os resistentes em volta da brasa. É ali que estranhos viram amigos, conselhos circulam e histórias são contadas. O artigo a descreve como uma terapia em grupo brasileira — sem divã, sem conta no final, só afeto e presença."}}, {"@type": "Question", "name": "O que é o copo americano e por que ele virou símbolo do pagode?", "acceptedAnswer": {"@type": "Answer", "text": "O copo americano é aquele copo pequeno, barato e quase indestrutível presente em quase toda casa brasileira. No pagode de quintal, ele virou o “cálice do novo luxo” porque representa inclusão: serve cerveja, refrigerante e caipirinha para todo mundo, sem cerimônia. Enquanto o luxo tradicional exclui, o luxo do quintal inclui — quanto mais gente, mais valiosa a roda fica."}}]}]}
 </script>
+<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 <body>
 <div id="progress"></div>
@@ -848,11 +909,15 @@
   <div class="story-meta">
     <span class="meta-pill">♥ Tendências</span>
     <span class="meta-pill">21 de set. de 2026</span>
+    <span class="meta-pill">✍️ Por <a href="/equipe/" style="color:inherit;text-decoration:underline">Equipe Histórias de Conexão</a></span>
   </div>
+  <nav class="breadcrumb" aria-label="Navegação">
+    <a href="/">Início</a> <span>›</span> <a href="/categoria/tendencias/">Tendências</a> <span>›</span> <span>O Renascimento da Roda: Por que o 'Pagode de Quintal' Virou o Novo Luxo Brasileiro</span>
+  </nav>
 </section>
 <div class="hero-image-wrap">
   <div class="hero-image">
-    <img src="https://i.ibb.co/wrcJQPjc/file.jpg" alt="Grupo de amigos reunidos em uma roda de samba moderna em um terraço urbano ao pôr do sol." width="1200" height="630" loading="eager">
+    <img src="https://i.ibb.co/wrcJQPjc/file.jpg" alt="Grupo de amigos reunidos em uma roda de samba moderna em um terraço urbano ao pôr do sol." width="1200" height="630" loading="eager" fetchpriority="high">
   </div>
   <div class="image-caption">Amigos reunidos numa roda de samba moderna num terraço urbano ao pôr do sol — a estética da resenha.</div>
 </div>
@@ -908,7 +973,19 @@
   <h2>Essa história mexeu com você?</h2>
   <p>Se essa crônica te deu vontade de juntar os amigos, compartilhar é o primeiro passo para a próxima resenha.</p>
   <button class="share-btn" id="shareBtn">Compartilhar esta história ↗</button>
+  <div class="follow-google">
+    <span>Siga o Histórias de Conexão no Google</span>
+    <div google-add-preferred-source-btn></div>
+  </div>
 </div>
+<section class="related" id="relatedSection" aria-label="Continue lendo">
+  <h2>Continue lendo</h2>
+  <div class="related-grid">
+<a class="related-card" href="/articulo/o-segredo-obscuro-dos-algoritmos-de-namoro/"><img src="https://i.ibb.co/ksdqqjT3/file.jpg" alt="O Segredo dos Algoritmos de Namoro e a Solidão Digital" loading="lazy" width="640" height="360"><div><small>Notícias 18+</small><strong>O segredo obscuro dos algoritmos de namoro que ninguém te conta (e como eles lucram com sua solidão)</strong></div></a>
+<a class="related-card" href="/articulo/manual-do-amor-tropical-dengo-e-humor/"><img src="https://i.ibb.co/8L9nFMzD/file.jpg" alt="Frases e Crônicas de Amor e Paquera com Alma Brasileira" loading="lazy" width="640" height="360"><div><small>Entretenimento e Frases</small><strong>Manual do Amor Tropical: Do Xaveco de Padaria ao Dengo no Forró</strong></div></a>
+<a class="related-card" href="/articulo/el-lenguaje-secreto-de-los-balcones/"><img src="https://i.ibb.co/zHbPwssP/file.jpg" alt="A linguagem secreta das varandas: história real de conexão" loading="lazy" width="640" height="360"><div><small>Histórias da Vida Real</small><strong>A linguagem secreta das varandas</strong></div></a>
+  </div>
+</section>
 </article>
 </div>
 
