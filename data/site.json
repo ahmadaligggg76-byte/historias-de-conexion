@@ -1,5 +1,5 @@
 {
-  "name": "Historias de Conexión",
-  "baseUrl": "https://www.historiasdeconexion.com",
-  "note": "Cambia baseUrl cuando conectes tu dominio real en Vercel. Luego vuelve a generar canonicals o deja que n8n use SITE_BASE_URL."
+  "name": "Histórias de Conexão",
+  "baseUrl": "https://historias-de-conexion-omega.vercel.app",
+  "note": "Altere baseUrl quando conectar seu domínio real na Vercel."
 }
