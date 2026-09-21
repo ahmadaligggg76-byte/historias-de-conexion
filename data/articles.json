@@ -41,6 +41,31 @@
   ],
   "articles": [
     {
+      "id": "hdc-1790017335154",
+      "title": "Manual do Amor Tropical: Do Xaveco de Padaria ao Dengo no Forró",
+      "slug": "manual-do-amor-tropical-dengo-e-humor",
+      "category": "entretenimiento",
+      "categoryName": "Entretenimento e Frases",
+      "categorySlug": "entretenimiento",
+      "excerpt": "Se o amor fosse um feriado prolongado com sol de 40 graus e água de coco gelada, ele seria exatamente assim. Pegue seu guia de sobrevivência emocional.",
+      "seoTitle": "Frases e Crônicas de Amor e Paquera com Alma Brasileira",
+      "seoDescription": "Descubra frases originais, mini-contos românticos e jogos de paquera com o puro borogodó brasileiro. Ideal para compartilhar e encantar.",
+      "image": "https://i.ibb.co/8L9nFMzD/file.jpg",
+      "imageAlt": "Um casal dançando forró de forma aconchegante sob luzes quentes de uma festa popular brasileira.",
+      "date": "2026-09-21",
+      "dateDisplay": "21 de set. de 2026",
+      "tags": [
+        "romantismo",
+        "frases",
+        "humor",
+        "brasilidade",
+        "conexão"
+      ],
+      "status": "published",
+      "topicKey": "amor-tropical-e-frases-de-conexao",
+      "source": "n8n"
+    },
+    {
       "id": "hdc-1790014265341",
       "title": "El lenguaje secreto de los balcones",
       "slug": "el-lenguaje-secreto-de-los-balcones",
