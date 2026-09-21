@@ -1,0 +1,31 @@
+# Histórias de Conexão
+
+> Relatos íntimos sobre amor, encontros, emoções e conexões humanas. Novas histórias em português brasileiro (pt-BR) todos os dias.
+
+Site: https://historias-de-conexion-omega.vercel.app/
+Sitemap: https://historias-de-conexion-omega.vercel.app/sitemap.xml
+
+## Categorias
+
+- [Histórias da Vida Real](https://historias-de-conexion-omega.vercel.app/categoria/historias-de-la-vida-real/): relatos íntimos sobre conexões e relações.
+- [Dicas de Encontros](https://historias-de-conexion-omega.vercel.app/categoria/consejos-de-citas/): ideias práticas para conversar, sair e paquerar.
+- [Metas de Casal](https://historias-de-conexion-omega.vercel.app/categoria/metas-de-pareja/): hábitos e conversas para relações honestas.
+- [Notícias 18+](https://historias-de-conexion-omega.vercel.app/categoria/noticias-18/): cultura digital e comportamento para adultos.
+- [Tendências](https://historias-de-conexion-omega.vercel.app/categoria/tendencias/): cultura pop, música e lifestyle brasileiro.
+- [Entretenimento e Frases](https://historias-de-conexion-omega.vercel.app/categoria/entretenimiento/): frases, crônicas e humor romântico.
+
+## Artigos em destaque
+
+- [O Renascimento da Roda: Por que o 'Pagode de Quintal' Virou o Novo Luxo Brasileiro](https://historias-de-conexion-omega.vercel.app/articulo/o-renascimento-da-roda-pagode-de-quintal-tendencia/)
+- [Manual do Amor Tropical: Do Xaveco de Padaria ao Dengo no Forró](https://historias-de-conexion-omega.vercel.app/articulo/manual-do-amor-tropical-dengo-e-humor/)
+- [O Segredo Obscuro dos Algoritmos de Namoro](https://historias-de-conexion-omega.vercel.app/articulo/o-segredo-obscuro-dos-algoritmos-de-namoro/)
+- [A Linguagem Secreta das Varandas](https://historias-de-conexion-omega.vercel.app/articulo/el-lenguaje-secreto-de-los-balcones/)
+- [Escrevi "você está bem?" e me arrependi de olhar o celular a cada cinco minutos](https://historias-de-conexion-omega.vercel.app/articulo/le-escribi-estas-bien/)
+
+## Sobre o conteúdo
+
+- Idioma: português brasileiro (pt-BR).
+- Formato: crônicas, histórias reais, guias e listas sobre relações humanas.
+- Cada artigo traz resumo ("Resumo"), capítulos, citações e perguntas frequentes.
+- Imagens de capa em 1200x630 com texto alternativo descritivo.
+- Citação permitida com link para a fonte.

@@ -755,10 +755,76 @@
         font-size: 16.5px;
       }
     }
+
+    /* =========================
+       GEO: summary + FAQ
+    ========================= */
+    .summary-box {
+      max-width: 760px;
+      margin: 26px auto 0;
+      padding: 20px 24px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 18px 18px 0;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .summary-box strong {
+      display: block;
+      font: 800 12px Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .summary-box p {
+      margin: 0;
+      font: 15px/1.8 Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .faq {
+      margin: 38px 0 8px;
+      padding: 26px 26px 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .faq h2 {
+      margin: 0 0 6px;
+      font-size: 24px;
+      letter-spacing: -.5px;
+    }
+
+    .faq-item {
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item:first-of-type {
+      border-top: 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font: 700 16px/1.5 Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .faq-item p {
+      margin: 0;
+      font: 14.5px/1.75 Arial, sans-serif;
+      color: var(--muted);
+    }
+
   </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Escrevi \u201cvoc\u00ea est\u00e1 bem?\u201d e me arrependi de olhar o celular a cada cinco minutos","description":"Uma hist\u00f3ria sobre mensagens, d\u00favidas, inseguran\u00e7as e aprender que o sil\u00eancio de algu\u00e9m pode significar muitas coisas.","image":"https://historias-de-conexion-omega.vercel.app/images/valeria-story.jpg","inLanguage":"pt-BR","author":{"@type":"Organization","name":"Hist\u00f3rias de Conex\u00e3o"},"publisher":{"@type":"Organization","name":"Hist\u00f3rias de Conex\u00e3o"},"mainEntityOfPage":"https://historias-de-conexion-omega.vercel.app/articulo/le-escribi-estas-bien/","datePublished":"2026-09-09"}
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão", "description": "Uma história sobre mensagens, dúvidas, inseguranças e aprender que o silêncio de alguém pode significar muitas coisas.", "image": "/images/valeria-story.jpg", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Histórias de Conexão"}, "publisher": {"@type": "Organization", "name": "Histórias de Conexão"}, "mainEntityOfPage": "https://historias-de-conexion-omega.vercel.app/articulo/le-escribi-estas-bien/", "datePublished": "2026-09-09"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que fazer quando a pessoa demora para responder no WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Primeiro, respire: o silêncio pode significar desinteresse, mas também cansaço, trabalho ou alguém buscando as palavras certas. O artigo mostra como a ansiedade transforma horas sem resposta numa “despedida que nunca aconteceu”. Pergunte-se: “eu sei o que está acontecendo ou estou preenchendo o silêncio com meus medos?”. Se a demora virar padrão, uma conversa honesta vale mais que mensagens ansiosas."}}, {"@type": "Question", "name": "Por que a demora para responder dói tanto quando gostamos de alguém?", "acceptedAnswer": {"@type": "Answer", "text": "Porque não sentimos falta só da mensagem — sentimos falta da sensação de ver aquele nome. Quando alguém ganha lugar no nosso dia, cada hora de silêncio parece uma rejeição, e a mente preenche o vazio com o pior. O texto lembra: cinco minutos podem parecer uma hora quando o coração escolheu, mas sentimento não transforma suposição em fato."}}, {"@type": "Question", "name": "Como foi o primeiro encontro do casal da história?", "acceptedAnswer": {"@type": "Answer", "text": "Simples e sem roteiro: café, caminhada, muitas risadas e alguns silêncios confortáveis. Aconteceu uma semana depois da conversa honesta em que ela confessou o medo de se envolver após um relacionamento complicado. Na despedida, ela brincou: “Você vai ficar olhando o celular a cada cinco minutos agora?” — e ele riu: “Provavelmente”. Um começo imperfeito, mas verdadeiro."}}, {"@type": "Question", "name": "Qual é a lição principal do artigo “Você está bem?”?", "acceptedAnswer": {"@type": "Answer", "text": "Que devemos deixar a história ser escrita com fatos, não com medos: o silêncio de alguém tem muitos significados, e inventar respostas machuca a gente. O caminho é esperar sem exigir, sentir sem cobrar e conversar em vez de supor. Diz o narrador: “o silêncio não é uma resposta — e até a outra pessoa falar, o resto são possibilidades”."}}]}]}
 </script>
 </head>
 
@@ -852,6 +918,11 @@
 
 </div>
 
+<div class="summary-box" id="summaryBox">
+  <strong>Resumo</strong>
+  <p>Depois de semanas de conversas ótimas num app de namoro, ela começou a demorar para responder — e o narrador transformou horas de silêncio numa história completa de rejeição dentro da própria cabeça, chegando a digitar e apagar um “Você está bem?”. Quando ela finalmente respondeu, a verdade era o oposto do imaginado: ela estava se apaixonando e com medo de não estar pronta. Uma conversa honesta e um café uma semana depois ensinaram a lição: o silêncio ainda não é uma resposta, e esperar sem inventar é o mais difícil quando alguém importa.</p>
+</div>
+
 
 <!-- =========================
      AD 1 — 728x90
@@ -895,7 +966,7 @@
 <article id="story">
 
 <p class="story-intro">
-La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por quinta vez en menos de veinte minutos.
+A primeira vez que pensei que algo estava errado, tinha acabado de olhar o celular pela quinta vez em menos de vinte minutos.
 </p>
 
 <p>Não queria escrever para ela de novo.</p>
@@ -1710,10 +1781,29 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
 </div>
 
 
+<section class="faq" id="faqSection" aria-label="Perguntas frequentes">
+  <h2>Perguntas frequentes</h2>
+<div class="faq-item">
+  <h3>O que fazer quando a pessoa demora para responder no WhatsApp?</h3>
+  <p>Primeiro, respire: o silêncio pode significar desinteresse, mas também cansaço, trabalho ou alguém buscando as palavras certas. O artigo mostra como a ansiedade transforma horas sem resposta numa “despedida que nunca aconteceu”. Pergunte-se: “eu sei o que está acontecendo ou estou preenchendo o silêncio com meus medos?”. Se a demora virar padrão, uma conversa honesta vale mais que mensagens ansiosas.</p>
+</div>
+<div class="faq-item">
+  <h3>Por que a demora para responder dói tanto quando gostamos de alguém?</h3>
+  <p>Porque não sentimos falta só da mensagem — sentimos falta da sensação de ver aquele nome. Quando alguém ganha lugar no nosso dia, cada hora de silêncio parece uma rejeição, e a mente preenche o vazio com o pior. O texto lembra: cinco minutos podem parecer uma hora quando o coração escolheu, mas sentimento não transforma suposição em fato.</p>
+</div>
+<div class="faq-item">
+  <h3>Como foi o primeiro encontro do casal da história?</h3>
+  <p>Simples e sem roteiro: café, caminhada, muitas risadas e alguns silêncios confortáveis. Aconteceu uma semana depois da conversa honesta em que ela confessou o medo de se envolver após um relacionamento complicado. Na despedida, ela brincou: “Você vai ficar olhando o celular a cada cinco minutos agora?” — e ele riu: “Provavelmente”. Um começo imperfeito, mas verdadeiro.</p>
+</div>
+<div class="faq-item">
+  <h3>Qual é a lição principal do artigo “Você está bem?”?</h3>
+  <p>Que devemos deixar a história ser escrita com fatos, não com medos: o silêncio de alguém tem muitos significados, e inventar respostas machuca a gente. O caminho é esperar sem exigir, sentir sem cobrar e conversar em vez de supor. Diz o narrador: “o silêncio não é uma resposta — e até a outra pessoa falar, o resto são possibilidades”.</p>
+</div>
+</section>
 <div class="end-card">
 
   <h2>
-    ¿Te ha pasado algo parecido?
+    Já passou por algo parecido?
   </h2>
 
   <p>Algumas vezes esperamos uma resposta e acabamos criando nossa própria versão do que está acontecendo. Talvez esta história seja mais familiar para você do que imaginava.</p>
@@ -1773,7 +1863,7 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
       <h3>Privacidade</h3>
 
       <p>
-        Respetamos la privacidad de nuestros visitantes. Este sitio puede utilizar cookies, tecnologías similares y servicios de terceros para mejorar la experiencia y mostrar contenido publicitario relevante.
+        Respeitamos a privacidade dos nossos visitantes. Este site pode utilizar cookies, tecnologias semelhantes e serviços de terceiros para melhorar a experiência e exibir conteúdo publicitário relevante.
       </p>
 
     </div>
@@ -1781,10 +1871,10 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
 
     <div class="legal-box" id="terms">
 
-      <h3>Términos y condiciones</h3>
+      <h3>Termos e condições</h3>
 
       <p>
-        El contenido publicado en Historias de Conexión tiene fines informativos y de entretenimiento. Al utilizar este sitio, aceptas utilizarlo de forma responsable y respetar las leyes aplicables.
+        O conteúdo publicado no Histórias de Conexão tem fins informativos e de entretenimento. Ao utilizar este site, você concorda em usá-lo de forma responsável e respeitar as leis aplicáveis.
       </p>
 
     </div>
@@ -1795,7 +1885,7 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
       <h3>Aviso legal</h3>
 
       <p>
-        Las historias pueden contener elementos narrativos y no deben interpretarse como asesoramiento profesional. El contenido refleja experiencias y situaciones narrativas.
+        As histórias podem conter elementos narrativos e não devem ser interpretadas como aconselhamento profissional. O conteúdo reflete experiências e situações narrativas.
       </p>
 
     </div>
@@ -1806,7 +1896,7 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
       <h3>Contato</h3>
 
       <p>
-        Para consultas relacionadas con el sitio:
+        Para dúvidas relacionadas com o site:
         <br><br>
         <a href="mailto:Spanishlove2020@gmail.com">
           Spanishlove2020@gmail.com
@@ -1821,7 +1911,7 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
       <h3>Cookies</h3>
 
       <p>
-        Utilizamos cookies y almacenamiento local cuando es necesario para recordar preferencias, como el modo claro u oscuro, y mejorar la experiencia del sitio.
+        Utilizamos cookies e armazenamento local quando necessário para lembrar preferências, como o modo claro ou escuro, e melhorar a experiência do site.
       </p>
 
     </div>
@@ -1829,10 +1919,10 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
 
     <div class="legal-box">
 
-      <h3>Contenido</h3>
+      <h3>Conteúdo</h3>
 
       <p>
-        Historias de relaciones, encuentros, emociones y conexiones humanas. El contenido puede cambiar o actualizarse con el tiempo.
+        Histórias sobre relações, encontros, emoções e conexões humanas. O conteúdo pode mudar ou ser atualizado com o tempo.
       </p>
 
     </div>
@@ -1847,7 +1937,7 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
 <footer>
 
   <div class="footer-brand">
-    Historias de Conexión
+    Histórias de Conexão
   </div>
 
   <div>
@@ -1857,11 +1947,11 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
   <div class="footer-links">
 
     <a href="#privacy">
-      Privacidad
+      Privacidade
     </a>
 
     <a href="#terms">
-      Términos y condiciones
+      Termos e condições
     </a>
 
     <a href="#disclaimer">
@@ -1869,7 +1959,7 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
     </a>
 
     <a href="#contact">
-      Contacto
+      Contato
     </a>
 
   </div>
@@ -1888,15 +1978,11 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
     <strong>🍪 Sua privacidade importa.</strong><br>
 
     Usamos cookies e tecnologias semelhantes para melhorar sua experiência.
-    Puedes consultar nuestra
-    <a href="#privacy" style="color:var(--accent);">
-      Política de privacidad
-    </a>.
 
   </div>
 
   <button class="cookie-btn" id="cookieAccept">
-    Aceptar
+    Aceitar
   </button>
 
 </div>
@@ -2113,6 +2199,60 @@ La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por qu
     cookieBanner.classList.add("hide");
 
   });
+
+
+  /* =========================
+     GEO: hide empty or unfilled blocks
+     (safety net in case a placeholder was not filled)
+  ========================= */
+
+  (function geoCleanup() {
+
+    var summaryBox =
+      document.getElementById("summaryBox");
+
+    if (summaryBox) {
+
+      var summaryP =
+        summaryBox.querySelector("p");
+
+      var summaryText =
+        summaryP ? summaryP.textContent.trim() : "";
+
+      if (
+        !summaryText ||
+        summaryText.indexOf("{{") !== -1
+      ) {
+
+        summaryBox.remove();
+
+      }
+
+    }
+
+    var faqSection =
+      document.getElementById("faqSection");
+
+    if (faqSection) {
+
+      var hasItems =
+        faqSection.querySelector(".faq-item");
+
+      var faqText =
+        faqSection.textContent || "";
+
+      if (
+        !hasItems ||
+        faqText.indexOf("{{") !== -1
+      ) {
+
+        faqSection.remove();
+
+      }
+
+    }
+
+  })();
 
 </script>
 
