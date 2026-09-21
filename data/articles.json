@@ -1,6 +1,6 @@
 {
   "site": "Historias de Conexión",
-  "updated": "2026-09-18",
+  "updated": "2026-09-21",
   "categories": [
     {
       "key": "historias",
@@ -40,6 +40,30 @@
     }
   ],
   "articles": [
+    {
+      "id": "hdc-1790011525870",
+      "title": "El lenguaje secreto de los balcones",
+      "slug": "el-lenguaje-secreto-de-los-balcones",
+      "category": "historias",
+      "categoryName": "Historias de la Vida Real",
+      "categorySlug": "historias-de-la-vida-real",
+      "excerpt": "En el silencio de un edificio de apartamentos, una planta descuidada se convirtió en el puente inesperado entre dos vidas solitarias.",
+      "seoTitle": "El lenguaje secreto de los balcones: Historia de conexión real",
+      "seoDescription": "Una emotiva historia sobre dos vecinos que encuentran una conexión profunda a través de las plantas y notas anónimas en un edificio de ciudad.",
+      "image": "https://i.ibb.co/FqfmFHzm/file.jpg",
+      "imageAlt": "Un balcón lleno de plantas verdes con notas de papel entre las macetas.",
+      "date": "2026-09-21",
+      "dateDisplay": "21 sept 2026",
+      "tags": [
+        "conexión humana",
+        "relatos reales",
+        "soledad",
+        "amistad"
+      ],
+      "status": "published",
+      "topicKey": "historias-reales",
+      "source": "n8n"
+    },
     {
       "id": "hdc-0001",
       "title": "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos",
