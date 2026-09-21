@@ -1,42 +1,42 @@
 {
-  "site": "Historias de Conexión",
+  "site": "Histórias de Conexão",
   "updated": "2026-09-21",
   "categories": [
     {
       "key": "historias",
-      "name": "Historias de la Vida Real",
+      "name": "Histórias da Vida Real",
       "slug": "historias-de-la-vida-real",
-      "blurb": "Relatos íntimos sobre conexiones, silencios y lo que sentimos cuando alguien importa."
+      "blurb": "Relatos íntimos sobre conexões, silêncios e o que sentimos quando alguém importa."
     },
     {
       "key": "citas",
-      "name": "Consejos de Citas",
+      "name": "Dicas de Encontros",
       "slug": "consejos-de-citas",
-      "blurb": "Ideas prácticas para escribir, quedar y cuidar los límites sin perder la naturalidad."
+      "blurb": "Ideias práticas para conversar, sair e cuidar dos limites sem perder a naturalidade."
     },
     {
       "key": "pareja",
-      "name": "Metas de Pareja",
+      "name": "Metas de Casal",
       "slug": "metas-de-pareja",
-      "blurb": "Hábitos, confianza y conversaciones que ayudan a construir una relación más honesta."
+      "blurb": "Hábitos, confiança e conversas que ajudam a construir uma relação mais honesta."
     },
     {
       "key": "noticias18",
-      "name": "Noticias 18+",
+      "name": "Notícias 18+",
       "slug": "noticias-18",
-      "blurb": "Información para adultos sobre cultura digital, plataformas y debates actuales."
+      "blurb": "Informação para adultos sobre cultura digital, plataformas e debates atuais."
     },
     {
       "key": "tendencias",
-      "name": "Tendencias en Español",
+      "name": "Tendências",
       "slug": "tendencias",
-      "blurb": "Temas que circulan hoy entre audiencias de habla hispana."
+      "blurb": "Temas que circulam hoje entre o público brasileiro."
     },
     {
       "key": "entretenimiento",
-      "name": "Entretenimiento y Frases",
+      "name": "Entretenimento e Frases",
       "slug": "entretenimiento",
-      "blurb": "Citas, cultura popular y frases para guardar o compartir."
+      "blurb": "Frases, cultura pop e citações para guardar ou compartilhar."
     }
   ],
   "articles": [
@@ -45,7 +45,7 @@
       "title": "El lenguaje secreto de los balcones",
       "slug": "el-lenguaje-secreto-de-los-balcones",
       "category": "historias",
-      "categoryName": "Historias de la Vida Real",
+      "categoryName": "Histórias da Vida Real",
       "categorySlug": "historias-de-la-vida-real",
       "excerpt": "En el silencio de un edificio de apartamentos, una planta descuidada se convirtió en el puente inesperado entre dos vidas solitarias.",
       "seoTitle": "El lenguaje secreto de los balcones: Historia de conexión real",
@@ -53,7 +53,7 @@
       "image": "https://i.ibb.co/FqfmFHzm/file.jpg",
       "imageAlt": "Un balcón lleno de plantas verdes con notas de papel entre las macetas.",
       "date": "2026-09-21",
-      "dateDisplay": "21 sept 2026",
+      "dateDisplay": "21 set 2026",
       "tags": [
         "conexión humana",
         "relatos reales",
@@ -69,7 +69,7 @@
       "title": "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos",
       "slug": "le-escribi-estas-bien",
       "category": "historias",
-      "categoryName": "Historias de la Vida Real",
+      "categoryName": "Histórias da Vida Real",
       "categorySlug": "historias-de-la-vida-real",
       "excerpt": "Una historia sobre mensajes, dudas, inseguridades y aprender que el silencio de alguien puede significar muchas cosas.",
       "seoTitle": "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos | Historias de Conexión",
@@ -78,7 +78,7 @@
       "imageAlt": "Un hombre mirando su teléfono mientras espera una respuesta",
       "imageCaption": "Una pantalla, una espera y demasiadas historias inventadas en la cabeza.",
       "date": "2026-09-09",
-      "dateDisplay": "9 sep 2026",
+      "dateDisplay": "9 set 2026",
       "tags": [
         "relaciones",
         "experiencia-personal",
