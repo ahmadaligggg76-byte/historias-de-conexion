@@ -1,38 +1,38 @@
 [
   {
     "key": "historias",
-    "name": "Historias de la Vida Real",
+    "name": "Histórias da Vida Real",
     "slug": "historias-de-la-vida-real",
-    "blurb": "Relatos íntimos sobre conexiones, silencios y lo que sentimos cuando alguien importa."
+    "blurb": "Relatos íntimos sobre conexões, silêncios e o que sentimos quando alguém importa."
   },
   {
     "key": "citas",
-    "name": "Consejos de Citas",
+    "name": "Dicas de Encontros",
     "slug": "consejos-de-citas",
-    "blurb": "Ideas prácticas para escribir, quedar y cuidar los límites sin perder la naturalidad."
+    "blurb": "Ideias práticas para conversar, sair e cuidar dos limites sem perder a naturalidade."
   },
   {
     "key": "pareja",
-    "name": "Metas de Pareja",
+    "name": "Metas de Casal",
     "slug": "metas-de-pareja",
-    "blurb": "Hábitos, confianza y conversaciones que ayudan a construir una relación más honesta."
+    "blurb": "Hábitos, confiança e conversas que ajudam a construir uma relação mais honesta."
   },
   {
     "key": "noticias18",
-    "name": "Noticias 18+",
+    "name": "Notícias 18+",
     "slug": "noticias-18",
-    "blurb": "Información para adultos sobre cultura digital, plataformas y debates actuales."
+    "blurb": "Informação para adultos sobre cultura digital, plataformas e debates atuais."
   },
   {
     "key": "tendencias",
-    "name": "Tendencias en Español",
+    "name": "Tendências",
     "slug": "tendencias",
-    "blurb": "Temas que circulan hoy entre audiencias de habla hispana."
+    "blurb": "Temas que circulam hoje entre o público brasileiro."
   },
   {
     "key": "entretenimiento",
-    "name": "Entretenimiento y Frases",
+    "name": "Entretenimento e Frases",
     "slug": "entretenimiento",
-    "blurb": "Citas, cultura popular y frases para guardar o compartir."
+    "blurb": "Frases, cultura pop e citações para guardar ou compartilhar."
   }
 ]
