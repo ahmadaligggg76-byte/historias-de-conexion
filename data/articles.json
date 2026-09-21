@@ -41,6 +41,31 @@
   ],
   "articles": [
     {
+      "id": "hdc-1790018059756",
+      "title": "O segredo obscuro dos algoritmos de namoro que ninguém te conta (e como eles lucram com sua solidão)",
+      "slug": "o-segredo-obscuro-dos-algoritmos-de-namoro",
+      "category": "noticias18",
+      "categoryName": "Notícias 18+",
+      "categorySlug": "noticias-18",
+      "excerpt": "Entenda como a engenharia por trás do 'swipe' foi desenhada não para você encontrar o amor, mas para manter você pagando e solitário.",
+      "seoTitle": "O Segredo dos Algoritmos de Namoro e a Solidão Digital",
+      "seoDescription": "Descubra como os aplicativos de relacionamento manipulam suas emoções e por que eles lucram com a sua dificuldade em encontrar um parceiro.",
+      "image": "https://i.ibb.co/ksdqqjT3/file.jpg",
+      "imageAlt": "Ilustração de uma pessoa segurando um celular com vários perfis flutuando, simbolizando a paralisia da escolha.",
+      "date": "2026-09-21",
+      "dateDisplay": "21 de set. de 2026",
+      "tags": [
+        "comportamento",
+        "tecnologia",
+        "relacionamentos",
+        "cultura digital",
+        "psicologia"
+      ],
+      "status": "published",
+      "topicKey": "digital-culture",
+      "source": "n8n"
+    },
+    {
       "id": "hdc-1790017760304",
       "title": "O Renascimento da Roda: Por que o 'Pagode de Quintal' Virou o Novo Luxo Brasileiro",
       "slug": "o-renascimento-da-roda-pagode-de-quintal-tendencia",
