@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
       --muted: #7c686d;
       --border: rgba(127,29,61,.12);
 
-      /* NUEVA PALETA */
+      /* NOVA PALETA */
       --accent: #9f1239;
       --accent2: #c2415c;
       --accent3: #d97706;
@@ -734,10 +734,197 @@
         font-size: 16.5px;
       }
     }
+
+    /* =========================
+       LISTING (cards)
+    ========================= */
+
+    .listing-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 6px 18px 70px;
+    }
+
+    .section-label {
+      max-width: 1120px;
+      margin: 36px auto 18px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font: 800 12px Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    .section-label::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-img {
+      display: block;
+      aspect-ratio: 640 / 400;
+      overflow: hidden;
+      background: var(--surface2);
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px 20px 24px;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 21px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .card-excerpt {
+      color: var(--muted);
+      font: 14px/1.7 Arial, sans-serif;
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow);
+    }
+
+    .featured-img {
+      display: block;
+      min-height: 300px;
+    }
+
+    .featured-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .featured-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 14px;
+      padding: clamp(26px, 4vw, 54px);
+    }
+
+    .featured-body .eyebrow {
+      margin-bottom: 0;
+    }
+
+    .featured-title {
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -1px;
+      font-weight: 700;
+    }
+
+    .featured-excerpt {
+      color: var(--muted);
+      font: 16px/1.8 Arial, sans-serif;
+    }
+
+    .load-more-wrap {
+      text-align: center;
+      margin: 34px 0 10px;
+    }
+
+    .empty-state {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 42px 24px;
+      text-align: center;
+      color: var(--muted);
+      font: 15px/1.7 Arial, sans-serif;
+      box-shadow: var(--soft-shadow);
+    }
+
+    @media (max-width: 900px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-img {
+        min-height: 220px;
+        aspect-ratio: 1200 / 630;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
-  <title>Historias de la Vida Real | Historias de Conexión</title>
-  <meta name="description" content="Relatos íntimos sobre conexiones, silencios y lo que sentimos cuando alguien importa.">
+  <title>Histórias da Vida Real | Histórias de Conexão</title>
+  <meta name="description" content="Relatos íntimos sobre conexões, silêncios e o que sentimos quando alguém importa.">
+
+  <link rel="canonical" href="https://historias-de-conexion-omega.vercel.app/categoria/historias-de-la-vida-real/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Histórias de Conexão">
+  <meta property="og:title" content="Histórias da Vida Real | Histórias de Conexão">
+  <meta property="og:description" content="Relatos íntimos sobre conexões, silêncios e o que sentimos quando alguém importa.">
+  <meta property="og:url" content="https://historias-de-conexion-omega.vercel.app/categoria/historias-de-la-vida-real/">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
 <div id="progress"></div>
@@ -747,31 +934,31 @@
       <a href="/">Historias <span>de Conexión</span></a>
     </div>
     <div class="nav-actions">
-      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema" title="Cambiar tema">☾</button>
-      <button class="icon-btn" id="shareTop" aria-label="Compartir" title="Compartir">↗</button>
+      <button class="icon-btn" id="themeBtn" aria-label="Mudar tema" title="Mudar tema">☾</button>
+      <button class="icon-btn" id="shareTop" aria-label="Compartilhar" title="Compartilhar">↗</button>
     </div>
   </div>
 
 <div class="cat-bar">
-<a href="/">Inicio</a>
-<a class="active" href="/categoria/historias-de-la-vida-real/">Historias de la Vida Real</a>
-<a href="/categoria/consejos-de-citas/">Consejos de Citas</a>
-<a href="/categoria/metas-de-pareja/">Metas de Pareja</a>
-<a href="/categoria/noticias-18/">Noticias 18+</a>
-<a href="/categoria/tendencias/">Tendencias en Español</a>
-<a href="/categoria/entretenimiento/">Entretenimiento y Frases</a>
+<a href="/">Início</a>
+<a class="active" href="/categoria/historias-de-la-vida-real/">Histórias da Vida Real</a>
+<a href="/categoria/consejos-de-citas/">Dicas de Encontros</a>
+<a href="/categoria/metas-de-pareja/">Metas de Casal</a>
+<a href="/categoria/noticias-18/">Notícias 18+</a>
+<a href="/categoria/tendencias/">Tendências</a>
+<a href="/categoria/entretenimiento/">Entretenimento e Frases</a>
 </div>
 </header>
 <main>
 <section class="hero">
-  <div class="eyebrow">♥ Historias de la Vida Real</div>
-  <h1>Historias de la Vida Real</h1>
-  <div class="hero-subtitle">Relatos íntimos sobre conexiones, silencios y lo que sentimos cuando alguien importa.</div>
+  <div class="eyebrow">♥ Histórias da Vida Real</div>
+  <h1>Histórias da Vida Real</h1>
+  <div class="hero-subtitle">Relatos íntimos sobre conexões, silêncios e o que sentimos quando alguém importa.</div>
 </section>
 
 <div class="ad-wrap">
   <div class="ad-section ad-728">
-    <div class="ad-label">Contenido patrocinado</div>
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="wide-ad-scroll">
       <div class="ad-box">
         <script>
@@ -789,13 +976,13 @@
   </div>
 </div>
 
-<div class="article-shell">
-  <div id="cat-list" data-key="historias"></div>
+<div class="listing-wrap">
+  <div id="listing-root" data-mode="category" data-category="historias"></div>
 </div>
 
 <div class="ad-wrap">
   <div class="ad-section ad-300">
-    <div class="ad-label">Contenido patrocinado</div>
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="ad-box">
       <script>
         atOptions = {
@@ -814,7 +1001,7 @@
 
 <div class="ad-wrap">
   <div class="ad-section ad-728">
-    <div class="ad-label">Contenido patrocinado</div>
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="wide-ad-scroll">
       <div class="ad-box">
         <script>
@@ -835,19 +1022,19 @@
 </main>
 <footer>
   <div class="footer-brand">Historias de Conexión</div>
-  <div>Historias sobre relaciones, encuentros, emociones y conexiones humanas.</div>
+  <div>Histórias sobre relações, encontros, emoções e conexões humanas.</div>
   <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/#privacy">Privacidad</a>
-    <a href="/#contact">Contacto</a>
+    <a href="/">Início</a>
+    <a href="/#privacy">Privacidade</a>
+    <a href="/#contact">Contato</a>
   </div>
-  <div>© 2026 Historias de Conexión. Todos los derechos reservados.</div>
+  <div>© 2026 Historias de Conexión. Todos os direitos reservados.</div>
 </footer>
 <div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-text"><strong>🍪 Tu privacidad importa.</strong><br>Utilizamos cookies y tecnologías similares para mejorar tu experiencia.</div>
-  <button class="cookie-btn" id="cookieAccept">Aceptar</button>
+  <div class="cookie-text"><strong>🍪 Sua privacidade importa.</strong><br>Usamos cookies e tecnologias semelhantes para melhorar sua experiência.</div>
+  <button class="cookie-btn" id="cookieAccept">Aceitar</button>
 </div>
-<button id="topBtn" aria-label="Volver arriba">↑</button>
+<button id="topBtn" aria-label="Voltar ao topo">↑</button>
 
 <script>
 
@@ -952,11 +1139,10 @@
 
     const shareData = {
 
-      title:
-        "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos",
+      title: document.title,
 
       text:
-        "Una historia sobre mensajes, dudas e inseguridades cuando alguien tarda en responder.",
+        (document.querySelector('meta[name="description"]') || {}).content || "",
 
       url:
         window.location.href
@@ -979,13 +1165,13 @@
         );
 
         alert(
-          "Enlace copiado."
+          "Link copiado."
         );
 
       } else {
 
         alert(
-          "Copia el enlace de esta página para compartirla."
+          "Copie o link desta página para compartilhar."
         );
 
       }
@@ -1001,12 +1187,17 @@
   }
 
 
-  document
-    .getElementById("shareBtn")
-    .addEventListener(
+  const shareBtn =
+    document.getElementById("shareBtn");
+
+  if (shareBtn) {
+
+    shareBtn.addEventListener(
       "click",
       shareStory
     );
+
+  }
 
 
   document
@@ -1051,26 +1242,7 @@
 
 </script>
 
-<script>
-fetch("/data/articles.json").then(r=>r.json()).then(data=>{
-  const key = document.getElementById("cat-list").getAttribute("data-key");
-  const box = document.getElementById("cat-list");
-  const items = (data.articles||[]).filter(a=>a.status==="published" && a.category===key);
-  if(!items.length){
-    box.innerHTML = '<div class="legal-box"><h3>Pronto</h3><p>Todavía no hay más artículos en esta sección.</p></div>';
-    return;
-  }
-  box.innerHTML = items.map(a=>`
-    <a href="/articulo/${a.slug}/" style="display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:22px;margin-bottom:14px;box-shadow:var(--soft-shadow)">
-      <div class="story-meta" style="justify-content:flex-start;margin:0 0 10px">
-        <span class="meta-pill">${a.categoryName||""}</span>
-        <span class="meta-pill">${a.dateDisplay||""}</span>
-      </div>
-      <h2 style="margin:0 0 8px;font-size:26px;line-height:1.2">${a.title}</h2>
-      <p style="margin:0;color:var(--muted);font:15px/1.7 Arial,sans-serif">${a.excerpt||""}</p>
-    </a>`).join("");
-}).catch(()=>{});
-</script>
+<script src="/js/listing.js"></script>
 
 </body>
 </html>

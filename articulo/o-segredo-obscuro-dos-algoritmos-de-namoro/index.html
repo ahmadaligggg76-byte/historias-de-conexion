@@ -239,6 +239,7 @@
       background: #24181b;
       box-shadow: 0 30px 90px rgba(80,25,40,.20);
       border: 1px solid var(--border);
+      aspect-ratio: 1200 / 630;
     }
 
     .hero-image::after {
@@ -254,11 +255,13 @@
     }
 
     .hero-image img {
-      display: block;
+      position: absolute;
+      inset: 0;
       width: 100%;
-      height: auto;
-      aspect-ratio: 1200 / 630;
+      height: 100%;
       object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     .image-caption {

@@ -1,27 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos | Historias de Conexión</title>
-
-  <meta name="description" content="Una historia sobre mensajes, dudas, inseguridades y aprender que el silencio de alguien puede significar muchas cosas.">
   <meta name="theme-color" content="#7f1d3d">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos">
-  <meta property="og:description" content="Una historia sobre mensajes, dudas, conexiones y todo lo que podemos imaginar cuando alguien tarda en responder.">
-  <meta property="og:image" content="/images/valeria-story.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="es_ES">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos">
-  <meta name="twitter:description" content="Una historia sobre mensajes, dudas e inseguridades cuando alguien tarda en responder.">
-  <meta name="twitter:image" content="/images/valeria-story.jpg">
-
   <style>
     :root {
       --bg: #fbf5f2;
@@ -31,7 +13,7 @@
       --muted: #7c686d;
       --border: rgba(127,29,61,.12);
 
-      /* NUEVA PALETA */
+      /* NOVA PALETA */
       --accent: #9f1239;
       --accent2: #c2415c;
       --accent3: #d97706;
@@ -752,116 +734,239 @@
         font-size: 16.5px;
       }
     }
+
+    /* =========================
+       LISTING (cards)
+    ========================= */
+
+    .listing-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 6px 18px 70px;
+    }
+
+    .section-label {
+      max-width: 1120px;
+      margin: 36px auto 18px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font: 800 12px Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    .section-label::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-img {
+      display: block;
+      aspect-ratio: 640 / 400;
+      overflow: hidden;
+      background: var(--surface2);
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px 20px 24px;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 21px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .card-excerpt {
+      color: var(--muted);
+      font: 14px/1.7 Arial, sans-serif;
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow);
+    }
+
+    .featured-img {
+      display: block;
+      min-height: 300px;
+    }
+
+    .featured-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .featured-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 14px;
+      padding: clamp(26px, 4vw, 54px);
+    }
+
+    .featured-body .eyebrow {
+      margin-bottom: 0;
+    }
+
+    .featured-title {
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -1px;
+      font-weight: 700;
+    }
+
+    .featured-excerpt {
+      color: var(--muted);
+      font: 16px/1.8 Arial, sans-serif;
+    }
+
+    .load-more-wrap {
+      text-align: center;
+      margin: 34px 0 10px;
+    }
+
+    .empty-state {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 42px 24px;
+      text-align: center;
+      color: var(--muted);
+      font: 15px/1.7 Arial, sans-serif;
+      box-shadow: var(--soft-shadow);
+    }
+
+    @media (max-width: 900px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-img {
+        min-height: 220px;
+        aspect-ratio: 1200 / 630;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
+
+  <title>Histórias de Conexão | Relatos de amor, encontros e conexões</title>
+  <meta name="description" content="Histórias de Conexão: relatos íntimos sobre amor, encontros, emoções e conexões humanas. Novas histórias em português todos os dias.">
+
+  <link rel="canonical" href="https://historias-de-conexion-omega.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Histórias de Conexão">
+  <meta property="og:title" content="Histórias de Conexão | Relatos de amor, encontros e conexões">
+  <meta property="og:description" content="Histórias de Conexão: relatos íntimos sobre amor, encontros, emoções e conexões humanas. Novas histórias em português todos os dias.">
+  <meta property="og:url" content="https://historias-de-conexion-omega.vercel.app/">
+  <meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Histórias de Conexão",
+ "url":"https://historias-de-conexion-omega.vercel.app/",
+ "description":"Relatos íntimos sobre amor, encontros, emoções e conexões humanas. Novas histórias em português todos os dias.",
+ "inLanguage":"pt-BR"}
+</script>
 </head>
-
 <body>
-
 <div id="progress"></div>
-
 <header>
   <div class="nav">
-
     <div class="brand">
       <a href="/">Historias <span>de Conexión</span></a>
     </div>
-
     <div class="nav-actions">
-
-      <button
-        class="icon-btn"
-        id="themeBtn"
-        aria-label="Cambiar tema"
-        title="Cambiar tema">
-        ☾
-      </button>
-
-      <button
-        class="icon-btn"
-        id="shareTop"
-        aria-label="Compartir"
-        title="Compartir">
-        ↗
-      </button>
-
+      <button class="icon-btn" id="themeBtn" aria-label="Mudar tema" title="Mudar tema">☾</button>
+      <button class="icon-btn" id="shareTop" aria-label="Compartilhar" title="Compartilhar">↗</button>
     </div>
+  </div>
 
-  </div>
-  <div class="cat-bar">
-    <a class="active" href="/">Inicio</a>
-    <a href="/categoria/historias-de-la-vida-real/">Historias de la Vida Real</a>
-    <a href="/categoria/consejos-de-citas/">Consejos de Citas</a>
-    <a href="/categoria/metas-de-pareja/">Metas de Pareja</a>
-    <a href="/categoria/noticias-18/">Noticias 18+</a>
-    <a href="/categoria/tendencias/">Tendencias en Español</a>
-    <a href="/categoria/entretenimiento/">Entretenimiento y Frases</a>
-  </div>
+<div class="cat-bar">
+<a class="active" href="/">Início</a>
+<a href="/categoria/historias-de-la-vida-real/">Histórias da Vida Real</a>
+<a href="/categoria/consejos-de-citas/">Dicas de Encontros</a>
+<a href="/categoria/metas-de-pareja/">Metas de Casal</a>
+<a href="/categoria/noticias-18/">Notícias 18+</a>
+<a href="/categoria/tendencias/">Tendências</a>
+<a href="/categoria/entretenimiento/">Entretenimento e Frases</a>
+</div>
 </header>
-
-
 <main>
-
 <section class="hero">
-
-  <div class="eyebrow">
-    ♥ Historia realista de conexión
-  </div>
-
-  <h1>
-    Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos
-  </h1>
-
-  <div class="hero-subtitle">
-    A veces el silencio no significa rechazo. A veces simplemente estamos llenando los espacios vacíos con nuestros propios miedos.
-  </div>
-
-  <div class="story-meta">
-    <span class="meta-pill">♥ Relaciones</span>
-    <span class="meta-pill">◷ Experiencia personal</span>
-    <span class="meta-pill">Conexiones</span>
-  </div>
-
+  <div class="eyebrow">♥ Histórias de conexão</div>
+  <h1>Histórias de Conexão</h1>
+  <div class="hero-subtitle">Relatos íntimos sobre amor, encontros e os silêncios que dizem tudo. Uma nova história todos os dias.</div>
 </section>
 
-
-<div class="hero-image-wrap">
-
-  <div class="hero-image">
-
-    <img
-      src="/images/valeria-story.jpg"
-      alt="Un hombre mirando su teléfono mientras espera una respuesta"
-      width="1200"
-      height="630"
-      loading="eager"
-      fetchpriority="high"
-    >
-
-  </div>
-
-  <div class="image-caption">
-    Una pantalla, una espera y demasiadas historias inventadas en la cabeza.
-  </div>
-
-</div>
-
-
-<!-- =========================
-     AD 1 — 728x90
-========================= -->
-
 <div class="ad-wrap">
-
   <div class="ad-section ad-728">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="wide-ad-scroll">
-
       <div class="ad-box">
-
         <script>
           atOptions = {
             'key' : 'f10e34f0b71b6ed505bc5a3326f5382c',
@@ -871,369 +976,20 @@
             'params' : {}
           };
         </script>
-
         <script src="https://accedelid.com/f10e34f0b71b6ed505bc5a3326f5382c/invoke.js"></script>
-
       </div>
-
     </div>
-
   </div>
-
 </div>
 
-
-<div class="article-shell">
-
-<article id="story">
-
-<p class="story-intro">
-La primera vez que pensé que algo iba mal, acababa de mirar el teléfono por quinta vez en menos de veinte minutos.
-</p>
-
-<p>
-No quería escribirle otra vez.
-</p>
-
-<p>
-De verdad que no.
-</p>
-
-<p>
-Había prometido que esta vez iba a dejar el teléfono sobre la mesa y continuar con mi día como si nada estuviera pasando.
-</p>
-
-<p>
-Pero cada pocos minutos terminaba haciendo exactamente lo contrario.
-</p>
-
-<p>
-Miraba la pantalla.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-La bloqueaba.
-</p>
-
-<p>
-Pasaban cinco minutos.
-</p>
-
-<p>
-Volvía a mirarla.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-Y lo peor no era que no hubiera respondido.
-</p>
-
-<p>
-Lo peor era que yo ya había empezado a imaginar todas las razones posibles.
-</p>
-
-<p>
-Quizá se había cansado de hablar conmigo.
-</p>
-
-<p>
-Quizá había conocido a otra persona.
-</p>
-
-<p>
-Quizá nuestra conversación de los últimos días significaba mucho menos para ella de lo que había significado para mí.
-</p>
-
-<p>
-O quizá simplemente estaba ocupada.
-</p>
-
-<p>
-El problema era que mi cabeza nunca elegía la explicación más tranquila.
-</p>
-
-<p>
-La conocí un domingo por la noche en una aplicación de citas.
-</p>
-
-<p>
-Su perfil era bastante sencillo.
-</p>
-
-<p>
-Tres fotos, una descripción corta y una frase que me llamó la atención:
-</p>
-
-<div class="quote-space">
-<p>
-“Me gustan las personas que pueden hacerme reír sin intentar demasiado.”
-</p>
+<div class="listing-wrap">
+  <div id="listing-root" data-mode="home"></div>
 </div>
-
-<p>
-Le di "me gusta".
-</p>
-
-<p>
-Hicimos match unos minutos después.
-</p>
-
-<p>
-Normalmente soy malo empezando conversaciones.
-</p>
-
-<p>
-No sabía si escribir algo divertido, hacer una pregunta o simplemente decir "hola".
-</p>
-
-<p>
-Al final escribí:
-</p>
-
-<div class="quote-space">
-<p>
-—Tengo que admitir que llevo cinco minutos pensando qué decirte.
-</p>
-</div>
-
-<p>
-Su respuesta llegó casi inmediatamente.
-</p>
-
-<div class="quote-space">
-<p>
-—Entonces espero que haya valido la pena esperar.
-</p>
-</div>
-
-<p>
-Me reí solo.
-</p>
-
-<p>
-—Ahora estoy bajo presión.
-</p>
-
-<p>
-—Un poco.
-</p>
-
-<p>
-Y así empezó.
-</p>
-
-<p>
-No fue una conversación espectacular desde el primer minuto.
-</p>
-
-<p>
-Fue mejor.
-</p>
-
-<p>
-Fue fácil.
-</p>
-
-<p>
-Hablamos de cosas pequeñas.
-</p>
-
-<p>
-De comida.
-</p>
-
-<p>
-De películas.
-</p>
-
-<p>
-De lugares que queríamos conocer.
-</p>
-
-<p>
-De lo mal que ambos cocinábamos.
-</p>
-
-
-<!-- AD 2 — 468x60 -->
 
 <div class="ad-wrap">
-
-  <div class="ad-section ad-468">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <div class="wide-ad-scroll">
-
-      <div class="ad-box">
-
-        <script>
-          atOptions = {
-            'key' : 'abcac0e903300a8ca583d35d269a4333',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-          };
-        </script>
-
-        <script src="https://accedelid.com/abcac0e903300a8ca583d35d269a4333/invoke.js"></script>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<p>
-Una noche terminamos hablando hasta casi las dos de la madrugada.
-</p>
-
-<p>
-Al día siguiente pensé en ella más de lo que quería admitir.
-</p>
-
-<p>
-Después empezaron los audios.
-</p>
-
-<p>
-Luego las llamadas.
-</p>
-
-<p>
-Y sin darme cuenta, dejó de ser simplemente alguien con quien había hecho match.
-</p>
-
-<p>
-Empecé a esperar sus mensajes.
-</p>
-
-<p>
-Cuando aparecía su nombre en mi pantalla, sonreía.
-</p>
-
-<p>
-Cuando tardaba demasiado, intentaba no pensar en ello.
-</p>
-
-<p>
-Hasta que un día me di cuenta de algo.
-</p>
-
-<p>
-Ya me importaba.
-</p>
-
-<p>
-Y eso me daba un poco de miedo.
-</p>
-
-<p>
-Porque conocer a alguien por internet tiene algo extraño.
-</p>
-
-<p>
-Puedes sentir una conexión muy fuerte con una persona antes de haber compartido siquiera una tarde juntos.
-</p>
-
-<p>
-Con ella todavía no habíamos tenido nuestra primera cita.
-</p>
-
-<p>
-Pero ya conocía su forma de reír.
-</p>
-
-<p>
-Sabía cuándo estaba cansada por la manera en que escribía.
-</p>
-
-<p>
-Sabía que los domingos por la mañana le gustaba dormir hasta tarde.
-</p>
-
-<p>
-Y sabía que cuando algo realmente le preocupaba, mandaba audios más largos de lo normal.
-</p>
-
-<p>
-Por eso noté el cambio.
-</p>
-
-<p>
-No fue de un día para otro.
-</p>
-
-<p>
-Simplemente empezó a responder un poco más tarde.
-</p>
-
-<p>
-Antes contestaba en minutos.
-</p>
-
-<p>
-Después en una hora.
-</p>
-
-<p>
-Luego en varias.
-</p>
-
-<p>
-Yo intentaba decirme que era normal.
-</p>
-
-<p>
-Todos tenemos trabajo.
-</p>
-
-<p>
-Familia.
-</p>
-
-<p>
-Amigos.
-</p>
-
-<p>
-Problemas.
-</p>
-
-<p>
-Una vida fuera del teléfono.
-</p>
-
-<p>
-Pero cuando alguien empieza a importarte, la lógica no siempre gana.
-</p>
-
-
-<!-- AD 3 — 300x250 -->
-
-<div class="ad-wrap">
-
   <div class="ad-section ad-300">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="ad-box">
-
       <script>
         atOptions = {
           'key' : 'b48302e270e7c32d0f8275a29268b922',
@@ -1243,975 +999,17 @@ Pero cuando alguien empieza a importarte, la lógica no siempre gana.
           'params' : {}
         };
       </script>
-
       <script src="https://accedelid.com/b48302e270e7c32d0f8275a29268b922/invoke.js"></script>
-
     </div>
-
   </div>
-
 </div>
 
-
-<p>
-El jueves por la mañana le envié:
-</p>
-
-<div class="quote-space">
-<p>
-—Buenos días. Espero que tengas un día bonito.
-</p>
-</div>
-
-<p>
-Lo leyó.
-</p>
-
-<p>
-No respondió.
-</p>
-
-<p>
-Esperé.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-Al mediodía seguía sin respuesta.
-</p>
-
-<p>
-Por la tarde tampoco.
-</p>
-
-<p>
-Me dije que no iba a escribirle otra vez.
-</p>
-
-<p>
-Entonces llegó la noche.
-</p>
-
-<p>
-Abrí nuestra conversación.
-</p>
-
-<p>
-Escribí:
-</p>
-
-<div class="quote-space">
-<p>
-—¿Todo bien?
-</p>
-</div>
-
-<p>
-Lo borré.
-</p>
-
-<p>
-Volví a escribir:
-</p>
-
-<div class="quote-space">
-<p>
-—Espero que no haya pasado nada.
-</p>
-</div>
-
-<p>
-Lo borré también.
-</p>
-
-<p>
-Finalmente envié algo mucho más sencillo:
-</p>
-
-<div class="quote-space">
-<p>
-—¿Estás bien?
-</p>
-</div>
-
-<p>
-Y dejé el teléfono.
-</p>
-
-<p>
-Pasaron veinte minutos.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-Una hora.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-Dos horas.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-A las once de la noche vi que había leído el mensaje.
-</p>
-
-<p>
-Sentí una pequeña presión en el pecho.
-</p>
-
-<p>
-No porque me debiera una respuesta.
-</p>
-
-<p>
-Eso lo sabía.
-</p>
-
-<p>
-Sino porque, después de tantos días hablando, su silencio empezaba a sentirse diferente.
-</p>
-
-<p>
-Me acosté.
-</p>
-
-<p>
-Intenté dormir.
-</p>
-
-<p>
-No pude.
-</p>
-
-<p>
-A las 00:17 miré el teléfono.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-A las 00:42, otra vez.
-</p>
-
-<p>
-Nada.
-</p>
-
-<p>
-Y entonces hice algo que normalmente nunca hago.
-</p>
-
-<p>
-Escribí otro mensaje.
-</p>
-
-<div class="quote-space">
-<p>
-“¿Por qué sigues sin responderme?”
-</p>
-</div>
-
-<p>
-Lo miré durante varios segundos.
-</p>
-
-<p>
-Sabía que podía sonar demasiado intenso.
-</p>
-
-<p>
-Así que no lo envié.
-</p>
-
-<p>
-Lo borré.
-</p>
-
-
-<!-- NATIVE AD -->
 
 <div class="ad-wrap">
-
-  <div class="ad-section native-ad">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <script
-      async="async"
-      data-cfasync="false"
-      src="https://accedelid.com/d2eaf2963bbd0d59134331dc7ae2fa8f/invoke.js">
-    </script>
-
-    <div id="container-d2eaf2963bbd0d59134331dc7ae2fa8f"></div>
-
-  </div>
-
-</div>
-
-
-<div class="story-break"></div>
-
-<p>
-Al día siguiente me levanté decidido a olvidarme del asunto.
-</p>
-
-<p>
-Trabajé.
-</p>
-
-<p>
-Salí a comprar algunas cosas.
-</p>
-
-<p>
-Hablé con un amigo.
-</p>
-
-<p>
-Intenté mantenerme ocupado.
-</p>
-
-<p>
-Pero cada vez que el teléfono vibraba, mi mano iba automáticamente hacia el bolsillo.
-</p>
-
-<p>
-Hasta que, por la tarde, apareció su nombre.
-</p>
-
-<p>
-Abrí el mensaje inmediatamente.
-</p>
-
-<p>
-—Perdón.
-</p>
-
-<p>
-Solo eso.
-</p>
-
-<p>
-Esperé unos segundos.
-</p>
-
-<p>
-Después llegó otro.
-</p>
-
-<div class="quote-space">
-<p>
-—Sé que no he estado muy presente estos días.
-</p>
-</div>
-
-<p>
-Y después:
-</p>
-
-<div class="quote-space">
-<p>
-—No sabía cómo decirte algo sin hacerte daño.
-</p>
-</div>
-
-<p>
-Ahí sentí que el corazón me bajaba al estómago.
-</p>
-
-<p>
-Pensé que ya sabía cómo terminaba aquello.
-</p>
-
-<p>
-Pero el siguiente mensaje cambió completamente la historia.
-</p>
-
-<div class="quote-space">
-<p>
-—Me estás gustando más de lo que esperaba.
-</p>
-</div>
-
-<p>
-Me quedé quieto.
-</p>
-
-<p>
-Volví a leerlo.
-</p>
-
-<p>
-Después continuó:
-</p>
-
-<div class="quote-space">
-<p>
-—Y creo que me asusté porque todavía no estoy segura de estar preparada para empezar algo con alguien.
-</p>
-</div>
-
-<p>
-No sabía qué responder.
-</p>
-
-<p>
-Una parte de mí quería decirle que podía esperar.
-</p>
-
-<p>
-Otra quería preguntarle por qué había desaparecido.
-</p>
-
-<p>
-Y otra simplemente quería protegerse.
-</p>
-
-<p>
-Al final escribí:
-</p>
-
-<div class="quote-space">
-<p>
-—Gracias por decírmelo.
-</p>
-</div>
-
-<p>
-Tardó unos segundos.
-</p>
-
-<p>
-—Pensé que te enfadarías.
-</p>
-
-<p>
-—Me dolió tu silencio más que lo que acabas de decirme.
-</p>
-
-<p>
-Ella tardó un poco en contestar.
-</p>
-
-<p>
-—Lo sé. Y lo siento.
-</p>
-
-<p>
-Aquella conversación duró casi una hora.
-</p>
-
-<p>
-No fue romántica.
-</p>
-
-<p>
-No fue perfecta.
-</p>
-
-<p>
-Hubo momentos incómodos.
-</p>
-
-<p>
-Pero fue honesta.
-</p>
-
-<p>
-Me explicó que había salido de una relación complicada y que, cuando empezó a sentir que nuestra conexión podía convertirse en algo real, sintió miedo.
-</p>
-
-<p>
-Yo también tuve que reconocer algo.
-</p>
-
-<p>
-Mi reacción no había sido solamente por sus mensajes.
-</p>
-
-<p>
-Había sido por mis propias inseguridades.
-</p>
-
-<p>
-Había tomado unas horas de silencio y las había convertido en una historia completa dentro de mi cabeza.
-</p>
-
-<p>
-Pensé que me estaba rechazando.
-</p>
-
-<p>
-Pensé que había otra persona.
-</p>
-
-<p>
-Pensé que había hecho algo mal.
-</p>
-
-<p>
-Sin preguntarle nada.
-</p>
-
-<p>
-Sin saber nada.
-</p>
-
-<p>
-Solo imaginándolo.
-</p>
-
-
-<!-- AD 4 — NATIVE -->
-
-<div class="ad-wrap">
-
-  <div class="ad-section native-ad">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <script
-      async="async"
-      data-cfasync="false"
-      src="https://accedelid.com/d2eaf2963bbd0d59134331dc7ae2fa8f/invoke.js">
-    </script>
-
-    <div id="container-d2eaf2963bbd0d59134331dc7ae2fa8f"></div>
-
-  </div>
-
-</div>
-
-
-<p>
-Al final no dejamos de hablar.
-</p>
-
-<p>
-Pero tampoco fingimos que todo estaba resuelto.
-</p>
-
-<p>
-Decidimos conocernos sin ponerle un nombre a lo que estaba pasando.
-</p>
-
-<p>
-Una semana después tuvimos nuestra primera cita.
-</p>
-
-<p>
-Fue sencilla.
-</p>
-
-<p>
-Café.
-</p>
-
-<p>
-Una caminata.
-</p>
-
-<p>
-Muchas risas.
-</p>
-
-<p>
-Y algunos silencios.
-</p>
-
-<p>
-Cuando nos despedimos, me dijo:
-</p>
-
-<div class="quote-space">
-<p>
-—¿Vas a mirar el teléfono cada cinco minutos ahora?
-</p>
-</div>
-
-<p>
-Me reí.
-</p>
-
-<p>
-—Probablemente.
-</p>
-
-<p>
-Ella negó con la cabeza.
-</p>
-
-<div class="quote-space">
-<p>
-—Entonces tendré que responderte un poco más rápido.
-</p>
-</div>
-
-
-<!-- AD 5 — 320x50 -->
-
-<div class="ad-wrap">
-
-  <div class="ad-section ad-320">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <div class="ad-box">
-
-      <script>
-        atOptions = {
-          'key' : '0cf64c37e3ae0034bc5f91939640a9e7',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-
-      <script src="https://accedelid.com/0cf64c37e3ae0034bc5f91939640a9e7/invoke.js"></script>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<p>
-No sé si aquella historia terminará convirtiéndose en una relación.
-</p>
-
-<p>
-Todavía no lo sé.
-</p>
-
-<p>
-Pero aprendí algo que probablemente necesitaba aprender mucho antes.
-</p>
-
-<p>
-Cuando alguien tarda en responder, el silencio puede significar muchas cosas.
-</p>
-
-<p>
-A veces significa desinterés.
-</p>
-
-<p>
-A veces significa que la persona está ocupada.
-</p>
-
-<p>
-A veces significa que está confundida.
-</p>
-
-<p>
-Y algunas veces significa que está intentando encontrar las palabras correctas.
-</p>
-
-<p>
-El problema aparece cuando dejamos de esperar una respuesta y empezamos a inventarla nosotros mismos.
-</p>
-
-<p>
-Porque cuando alguien nos importa, cinco minutos pueden parecer una hora.
-</p>
-
-<p>
-Y unas horas sin mensaje pueden convertirse, dentro de nuestra cabeza, en una despedida que nunca ocurrió.
-</p>
-
-
-<!-- AD 6 — 160x600 -->
-
-<div class="ad-wrap desktop-skyscraper">
-
-  <div class="ad-section ad-160">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <div class="ad-box">
-
-      <script>
-        atOptions = {
-          'key' : '138171dae72334cc4162374aa54ea6c7',
-          'format' : 'iframe',
-          'height' : 600,
-          'width' : 160,
-          'params' : {}
-        };
-      </script>
-
-      <script src="https://accedelid.com/138171dae72334cc4162374aa54ea6c7/invoke.js"></script>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<p>
-Desde aquel día sigo mirando mi teléfono cuando alguien tarda en responderme.
-</p>
-
-<p>
-La diferencia es que ahora intento hacerme una pregunta antes de sacar conclusiones:
-</p>
-
-<div class="quote-space">
-<p>
-“¿Realmente sé lo que está pasando… o simplemente estoy llenando el silencio con mis propios miedos?”
-</p>
-</div>
-
-<p>
-Y quizá tú también hayas estado alguna vez en ese lugar.
-</p>
-
-<p>
-Mirando una pantalla.
-</p>
-
-<p>
-Esperando un nombre.
-</p>
-
-<p>
-Preguntándote si deberías escribir otra vez.
-</p>
-
-<p>
-Quizá el problema nunca fue realmente el mensaje que no llegó.
-</p>
-
-<p>
-Quizá fue todo lo que nuestra mente decidió construir alrededor de ese silencio.
-</p>
-
-
-<!-- AD 7 — EXTRA JS -->
-
-<div class="ad-wrap">
-
-  <div class="ad-section script-ad">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <div class="ad-box">
-
-      <script src="https://accedelid.com/01/a2/eb/01a2ebc8243ea8b6b9c1ebc3cf6cfcd4.js"></script>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<div class="story-break"></div>
-
-<p>
-A veces queremos una respuesta inmediata porque creemos que esa respuesta nos dará tranquilidad.
-</p>
-
-<p>
-Pero no siempre funciona así.
-</p>
-
-<p>
-Incluso cuando finalmente recibimos el mensaje, puede que nuestra cabeza ya haya vivido diez versiones diferentes de lo ocurrido.
-</p>
-
-<p>
-Yo había hecho exactamente eso.
-</p>
-
-<p>
-Había convertido unas horas de silencio en rechazo.
-</p>
-
-<p>
-Había convertido una demora en otra persona.
-</p>
-
-<p>
-Había convertido una pantalla sin notificaciones en una historia completa.
-</p>
-
-<p>
-Y lo curioso es que ninguna de esas cosas había ocurrido realmente.
-</p>
-
-<p>
-Solo estaban ocurriendo dentro de mi cabeza.
-</p>
-
-
-<!-- AD 8 — EXTRA 300x250 -->
-
-<div class="ad-wrap">
-
-  <div class="ad-section ad-300">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <div class="ad-box">
-
-      <script>
-        atOptions = {
-          'key' : 'b48302e270e7c32d0f8275a29268b922',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-
-      <script src="https://accedelid.com/b48302e270e7c32d0f8275a29268b922/invoke.js"></script>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<p>
-Aquella experiencia también me enseñó algo sobre conocer personas por internet.
-</p>
-
-<p>
-Puedes sentir cercanía antes de conocer realmente a alguien.
-</p>
-
-<p>
-Puedes acostumbrarte a una voz.
-</p>
-
-<p>
-A una forma de escribir.
-</p>
-
-<p>
-A un nombre que aparece en la pantalla.
-</p>
-
-<p>
-Y cuando esa persona tarda en responder, no extrañas solamente el mensaje.
-</p>
-
-<p>
-Extrañas la sensación que te producía verlo.
-</p>
-
-<p>
-Quizá por eso duele tanto esperar.
-</p>
-
-<p>
-No porque la otra persona tenga la obligación de responder inmediatamente.
-</p>
-
-<p>
-Sino porque nosotros ya hemos empezado a darle un lugar importante en nuestro día.
-</p>
-
-<p>
-Y cuando ese lugar queda vacío durante unas horas, nuestra imaginación intenta llenarlo.
-</p>
-
-<p>
-La próxima vez que me pase, probablemente volveré a mirar el teléfono.
-</p>
-
-<p>
-No voy a fingir que soy completamente diferente ahora.
-</p>
-
-<p>
-Pero intentaré recordar algo.
-</p>
-
-<div class="quote-space">
-<p>
-El silencio todavía no es una respuesta.
-</p>
-</div>
-
-<p>
-Y hasta que la otra persona hable, todo lo demás son solamente posibilidades.
-</p>
-
-
-<!-- AD 9 — 160x300 -->
-
-<div class="ad-wrap">
-
-  <div class="ad-section ad-160">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <div class="ad-box">
-
-      <script>
-        atOptions = {
-          'key' : '25ae5e5a63554869407a59da4ae764d0',
-          'format' : 'iframe',
-          'height' : 300,
-          'width' : 160,
-          'params' : {}
-        };
-      </script>
-
-      <script src="https://accedelid.com/25ae5e5a63554869407a59da4ae764d0/invoke.js"></script>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<p>
-Y quizá eso sea lo más difícil cuando alguien empieza a importarnos.
-</p>
-
-<p>
-Aprender a esperar sin inventar.
-</p>
-
-<p>
-Aprender a sentir sin exigir.
-</p>
-
-<p>
-Aprender que una conexión puede ser importante sin tener que estar disponible cada minuto del día.
-</p>
-
-<p>
-No siempre vamos a entender inmediatamente lo que está pasando.
-</p>
-
-<p>
-Y eso no significa que algo esté mal.
-</p>
-
-<p>
-A veces simplemente significa que todavía estamos conociendo a la otra persona.
-</p>
-
-<p>
-Y quizá necesitamos permitir que la historia se escriba con hechos, no con nuestros miedos.
-</p>
-
-
-<div class="pause">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-
-<!-- AD 10 — EXTRA NATIVE -->
-
-<div class="ad-wrap">
-
-  <div class="ad-section native-ad">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
-    <script
-      async="async"
-      data-cfasync="false"
-      src="https://accedelid.com/d2eaf2963bbd0d59134331dc7ae2fa8f/invoke.js">
-    </script>
-
-    <div id="container-d2eaf2963bbd0d59134331dc7ae2fa8f"></div>
-
-  </div>
-
-</div>
-
-
-<p>
-Y todavía hay una pregunta que me hago cuando veo el teléfono y no encuentro el mensaje que estaba esperando:
-</p>
-
-<div class="quote-space">
-<p>
-“¿Alguna vez has esperado tanto una respuesta que terminaste imaginando una historia que quizá nunca estuvo ocurriendo?”
-</p>
-</div>
-
-
-<div class="end-card">
-
-  <h2>
-    ¿Te ha pasado algo parecido?
-  </h2>
-
-  <p>
-    Algunas veces esperamos una respuesta y terminamos creando nuestra propia versión de lo que está pasando. Quizá esta historia te resulte más familiar de lo que pensabas.
-  </p>
-
-  <button class="share-btn" id="shareBtn">
-    Compartir esta historia ↗
-  </button>
-
-</div>
-
-</article>
-
-</div>
-
-
-<!-- AD 11 — BOTTOM 728x90 -->
-
-<div class="ad-wrap">
-
   <div class="ad-section ad-728">
-
-    <div class="ad-label">
-      Contenido patrocinado
-    </div>
-
+    <div class="ad-label">Conteúdo patrocinado</div>
     <div class="wide-ad-scroll">
-
       <div class="ad-box">
-
         <script>
           atOptions = {
             'key' : 'f10e34f0b71b6ed505bc5a3326f5382c',
@@ -2221,163 +1019,28 @@ Y todavía hay una pregunta que me hago cuando veo el teléfono y no encuentro e
             'params' : {}
           };
         </script>
-
         <script src="https://accedelid.com/f10e34f0b71b6ed505bc5a3326f5382c/invoke.js"></script>
-
       </div>
-
     </div>
-
   </div>
-
 </div>
-
-
-<section class="legal-wrap">
-
-  <div class="legal-grid">
-
-    <div class="legal-box" id="privacy">
-
-      <h3>Privacidad</h3>
-
-      <p>
-        Respetamos la privacidad de nuestros visitantes. Este sitio puede utilizar cookies, tecnologías similares y servicios de terceros para mejorar la experiencia y mostrar contenido publicitario relevante.
-      </p>
-
-    </div>
-
-
-    <div class="legal-box" id="terms">
-
-      <h3>Términos y condiciones</h3>
-
-      <p>
-        El contenido publicado en Historias de Conexión tiene fines informativos y de entretenimiento. Al utilizar este sitio, aceptas utilizarlo de forma responsable y respetar las leyes aplicables.
-      </p>
-
-    </div>
-
-
-    <div class="legal-box" id="disclaimer">
-
-      <h3>Aviso legal</h3>
-
-      <p>
-        Las historias pueden contener elementos narrativos y no deben interpretarse como asesoramiento profesional. El contenido refleja experiencias y situaciones narrativas.
-      </p>
-
-    </div>
-
-
-    <div class="legal-box" id="contact">
-
-      <h3>Contacto</h3>
-
-      <p>
-        Para consultas relacionadas con el sitio:
-        <br><br>
-        <a href="mailto:Spanishlove2020@gmail.com">
-          Spanishlove2020@gmail.com
-        </a>
-      </p>
-
-    </div>
-
-
-    <div class="legal-box">
-
-      <h3>Cookies</h3>
-
-      <p>
-        Utilizamos cookies y almacenamiento local cuando es necesario para recordar preferencias, como el modo claro u oscuro, y mejorar la experiencia del sitio.
-      </p>
-
-    </div>
-
-
-    <div class="legal-box">
-
-      <h3>Contenido</h3>
-
-      <p>
-        Historias de relaciones, encuentros, emociones y conexiones humanas. El contenido puede cambiar o actualizarse con el tiempo.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
 
 </main>
-
-
 <footer>
-
-  <div class="footer-brand">
-    Historias de Conexión
-  </div>
-
-  <div>
-    Historias sobre relaciones, encuentros, emociones y conexiones humanas.
-  </div>
-
+  <div class="footer-brand">Historias de Conexión</div>
+  <div>Histórias sobre relações, encontros, emoções e conexões humanas.</div>
   <div class="footer-links">
-
-    <a href="#privacy">
-      Privacidad
-    </a>
-
-    <a href="#terms">
-      Términos y condiciones
-    </a>
-
-    <a href="#disclaimer">
-      Aviso legal
-    </a>
-
-    <a href="#contact">
-      Contacto
-    </a>
-
+    <a href="/">Início</a>
+    <a href="/#privacy">Privacidade</a>
+    <a href="/#contact">Contato</a>
   </div>
-
-  <div>
-    © 2026 Historias de Conexión. Todos los derechos reservados.
-  </div>
-
+  <div>© 2026 Historias de Conexión. Todos os direitos reservados.</div>
 </footer>
-
-
 <div class="cookie-banner" id="cookieBanner">
-
-  <div class="cookie-text">
-
-    <strong>🍪 Tu privacidad importa.</strong><br>
-
-    Utilizamos cookies y tecnologías similares para mejorar tu experiencia.
-    Puedes consultar nuestra
-    <a href="#privacy" style="color:var(--accent);">
-      Política de privacidad
-    </a>.
-
-  </div>
-
-  <button class="cookie-btn" id="cookieAccept">
-    Aceptar
-  </button>
-
+  <div class="cookie-text"><strong>🍪 Sua privacidade importa.</strong><br>Usamos cookies e tecnologias semelhantes para melhorar sua experiência.</div>
+  <button class="cookie-btn" id="cookieAccept">Aceitar</button>
 </div>
-
-
-<button
-  id="topBtn"
-  aria-label="Volver arriba"
-  title="Volver arriba">
-  ↑
-</button>
-
+<button id="topBtn" aria-label="Voltar ao topo">↑</button>
 
 <script>
 
@@ -2482,11 +1145,10 @@ Y todavía hay una pregunta que me hago cuando veo el teléfono y no encuentro e
 
     const shareData = {
 
-      title:
-        "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos",
+      title: document.title,
 
       text:
-        "Una historia sobre mensajes, dudas e inseguridades cuando alguien tarda en responder.",
+        (document.querySelector('meta[name="description"]') || {}).content || "",
 
       url:
         window.location.href
@@ -2509,13 +1171,13 @@ Y todavía hay una pregunta que me hago cuando veo el teléfono y no encuentro e
         );
 
         alert(
-          "Enlace copiado."
+          "Link copiado."
         );
 
       } else {
 
         alert(
-          "Copia el enlace de esta página para compartirla."
+          "Copie o link desta página para compartilhar."
         );
 
       }
@@ -2531,12 +1193,17 @@ Y todavía hay una pregunta que me hago cuando veo el teléfono y no encuentro e
   }
 
 
-  document
-    .getElementById("shareBtn")
-    .addEventListener(
+  const shareBtn =
+    document.getElementById("shareBtn");
+
+  if (shareBtn) {
+
+    shareBtn.addEventListener(
       "click",
       shareStory
     );
+
+  }
 
 
   document
@@ -2580,6 +1247,8 @@ Y todavía hay una pregunta que me hago cuando veo el teléfono y no encuentro e
   });
 
 </script>
+
+<script src="/js/listing.js"></script>
 
 </body>
 </html>

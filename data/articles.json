@@ -117,16 +117,16 @@
     },
     {
       "id": "hdc-1790014265341",
-      "title": "El lenguaje secreto de los balcones",
+      "title": "A linguagem secreta das varandas",
       "slug": "el-lenguaje-secreto-de-los-balcones",
       "category": "historias",
       "categoryName": "Histórias da Vida Real",
       "categorySlug": "historias-de-la-vida-real",
-      "excerpt": "En el silencio de un edificio de apartamentos, una planta descuidada se convirtió en el puente inesperado entre dos vidas solitarias.",
-      "seoTitle": "El lenguaje secreto de los balcones: Historia de conexión real",
-      "seoDescription": "Una emotiva historia sobre dos vecinos que encuentran una conexión profunda a través de las plantas y notas anónimas en un edificio de ciudad.",
+      "excerpt": "No silêncio de um prédio de apartamentos, uma planta esquecida virou a ponte inesperada entre duas vidas solitárias.",
+      "seoTitle": "A linguagem secreta das varandas: história real de conexão",
+      "seoDescription": "Uma história emocionante sobre dois vizinhos que encontram uma conexão profunda através de plantas e bilhetes anônimos em um prédio na cidade.",
       "image": "https://i.ibb.co/zHbPwssP/file.jpg",
-      "imageAlt": "Un balcón lleno de plantas verdes con notas de papel entre las macetas.",
+      "imageAlt": "Uma varanda cheia de plantas verdes com bilhetes de papel entre os vasos.",
       "date": "2026-09-21",
       "dateDisplay": "21 de set. de 2026",
       "tags": [
@@ -141,17 +141,17 @@
     },
     {
       "id": "hdc-0001",
-      "title": "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos",
+      "title": "Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos",
       "slug": "le-escribi-estas-bien",
       "category": "historias",
       "categoryName": "Histórias da Vida Real",
       "categorySlug": "historias-de-la-vida-real",
-      "excerpt": "Una historia sobre mensajes, dudas, inseguridades y aprender que el silencio de alguien puede significar muchas cosas.",
-      "seoTitle": "Le escribí “¿estás bien?” y después me arrepentí de mirar el teléfono cada cinco minutos | Historias de Conexión",
-      "seoDescription": "Una historia sobre mensajes, dudas, inseguridades y aprender que el silencio de alguien puede significar muchas cosas.",
+      "excerpt": "Uma história sobre mensagens, dúvidas, inseguranças e aprender que o silêncio de alguém pode significar muitas coisas.",
+      "seoTitle": "Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão",
+      "seoDescription": "Uma história sobre mensagens, dúvidas, inseguranças e aprender que o silêncio de alguém pode significar muitas coisas.",
       "image": "/images/valeria-story.jpg",
-      "imageAlt": "Un hombre mirando su teléfono mientras espera una respuesta",
-      "imageCaption": "Una pantalla, una espera y demasiadas historias inventadas en la cabeza.",
+      "imageAlt": "Um homem olhando o celular enquanto espera uma resposta",
+      "imageCaption": "Uma tela, uma espera e histórias demais inventadas na cabeça.",
       "date": "2026-09-09",
       "dateDisplay": "9 set 2026",
       "tags": [
@@ -161,8 +161,8 @@
       ],
       "status": "published",
       "source": "original-site",
-      "eyebrow": "♥ Historia realista de conexión",
-      "subtitle": "A veces el silencio no significa rechazo. A veces simplemente estamos llenando los espacios vacíos con nuestros propios miedos."
+      "eyebrow": "♥ História real de conexão",
+      "subtitle": "Às vezes o silêncio não significa rejeição. Às vezes estamos apenas preenchendo os espaços vazios com nossos próprios medos."
     }
   ]
 }

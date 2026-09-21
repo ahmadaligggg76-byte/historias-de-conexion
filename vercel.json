@@ -1,3 +1,45 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/categoria/historias",
+      "destination": "/categoria/historias-de-la-vida-real/",
+      "permanent": true
+    },
+    {
+      "source": "/categoria/historias/",
+      "destination": "/categoria/historias-de-la-vida-real/",
+      "permanent": true
+    },
+    {
+      "source": "/categoria/citas",
+      "destination": "/categoria/consejos-de-citas/",
+      "permanent": true
+    },
+    {
+      "source": "/categoria/citas/",
+      "destination": "/categoria/consejos-de-citas/",
+      "permanent": true
+    },
+    {
+      "source": "/categoria/pareja",
+      "destination": "/categoria/metas-de-pareja/",
+      "permanent": true
+    },
+    {
+      "source": "/categoria/pareja/",
+      "destination": "/categoria/metas-de-pareja/",
+      "permanent": true
+    },
+    {
+      "source": "/categoria/noticias",
+      "destination": "/categoria/noticias-18/",
+      "permanent": true
+    },
+    {
+      "source": "/categoria/noticias/",
+      "destination": "/categoria/noticias-18/",
+      "permanent": true
+    }
+  ]
 }

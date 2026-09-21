@@ -10,22 +10,28 @@
     return new Date(b.date) - new Date(a.date);
   }
 
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
   function cardHTML(item) {
     const img = item.image || "/images/valeria-story.jpg";
     const alt = item.imageAlt || item.title;
-    const excerpt = item.excerpt || "";
-    const dateLabel = item.dateDisplay || "";
     return (
-      '<a class="article-card" href="/articulo/' + item.slug + '/">' +
-        '<img src="' + img + '" alt="' + alt.replace(/"/g, "&quot;") + '" width="640" height="400" loading="lazy">' +
-        '<div class="card-body">' +
-          '<div class="card-meta">' +
-            '<span class="meta-pill">' + (item.categoryName || "") + '</span>' +
-            (dateLabel ? '<span class="meta-pill">' + dateLabel + '</span>' : "") +
-          "</div>" +
-          "<h3>" + item.title + "</h3>" +
-          "<p>" + excerpt + "</p>" +
-        "</div>" +
+      '<a class="article-card" href="/articulo/' + esc(item.slug) + '/">' +
+        '<span class="card-img"><img src="' + esc(img) + '" alt="' + esc(alt) + '" width="640" height="400" loading="lazy"></span>' +
+        '<span class="card-body">' +
+          '<span class="card-meta">' +
+            '<span class="meta-pill">' + esc(item.categoryName || "") + "</span>" +
+            (item.dateDisplay ? '<span class="meta-pill">' + esc(item.dateDisplay) + "</span>" : "") +
+          "</span>" +
+          '<span class="card-title">' + esc(item.title) + "</span>" +
+          '<span class="card-excerpt">' + esc(item.excerpt || "") + "</span>" +
+        "</span>" +
       "</a>"
     );
   }
@@ -34,56 +40,88 @@
     const img = item.image || "/images/valeria-story.jpg";
     const alt = item.imageAlt || item.title;
     return (
-      '<a class="featured-card" href="/articulo/' + item.slug + '/">' +
-        '<img src="' + img + '" alt="' + alt.replace(/"/g, "&quot;") + '" width="1200" height="630">' +
-        '<div class="featured-body">' +
-          '<div class="eyebrow">♥ Destacada</div>' +
-          "<h2>" + item.title + "</h2>" +
-          "<p>" + (item.excerpt || "") + "</p>" +
-          '<div class="story-meta" style="justify-content:flex-start;margin-top:18px">' +
-            '<span class="meta-pill">' + (item.categoryName || "") + '</span>' +
-            (item.dateDisplay ? '<span class="meta-pill">' + item.dateDisplay + "</span>" : "") +
-          "</div>" +
-        "</div>" +
+      '<a class="featured-card" href="/articulo/' + esc(item.slug) + '/">' +
+        '<span class="featured-img"><img src="' + esc(img) + '" alt="' + esc(alt) + '" width="1200" height="630" loading="eager"></span>' +
+        '<span class="featured-body">' +
+          '<span class="eyebrow">\u2665 Destaque</span>' +
+          '<span class="featured-title">' + esc(item.title) + "</span>" +
+          '<span class="featured-excerpt">' + esc(item.excerpt || "") + "</span>" +
+          '<span class="story-meta" style="justify-content:flex-start;margin-top:4px">' +
+            '<span class="meta-pill">' + esc(item.categoryName || "") + "</span>" +
+            (item.dateDisplay ? '<span class="meta-pill">' + esc(item.dateDisplay) + "</span>" : "") +
+          "</span>" +
+        "</span>" +
       "</a>"
     );
   }
 
+  function emptyHTML(msg) {
+    return '<div class="empty-state">' + msg + "</div>";
+  }
+
+  let pool = [];
+  let shown = 0;
+
+  function paint() {
+    const grid = document.getElementById("cardGrid");
+    const btn = document.getElementById("loadMore");
+    if (!grid) return;
+    grid.innerHTML = pool.slice(0, shown).map(cardHTML).join("");
+    if (btn) {
+      btn.style.display = shown >= pool.length ? "none" : "";
+    }
+  }
+
   fetch("/data/articles.json")
-    .then(function (r) { return r.json(); })
+    .then(function (r) {
+      if (!r.ok) throw new Error("http " + r.status);
+      return r.json();
+    })
     .then(function (data) {
-      const all = (data.articles || []).filter(function (a) { return a.status === "published"; }).sort(byDate);
-      let items = all;
+      let items = (data.articles || [])
+        .filter(function (a) { return a.status === "published"; })
+        .sort(byDate);
       if (mode === "category") {
-        items = all.filter(function (a) { return a.category === category; });
+        items = items.filter(function (a) { return a.category === category; });
       }
 
       if (!items.length) {
-        root.innerHTML = '<div class="empty-state">Todavía no hay artículos en esta sección. Vuelve pronto.</div>';
+        root.innerHTML = emptyHTML("Ainda n\u00e3o h\u00e1 artigos nesta se\u00e7\u00e3o. Volte em breve.");
         return;
       }
 
       let html = "";
       if (mode === "home") {
         html += featuredHTML(items[0]);
-        html += '</div><div class="section-label">Últimas historias</div><div class="listing-wrap"><div class="card-grid" id="cardGrid">';
-        const rest = items.slice(1);
-        if (!rest.length) {
-          html += '<div class="empty-state">Más historias aparecerán aquí cuando se publiquen.</div>';
-        } else {
-          html += rest.map(cardHTML).join("");
+        pool = items.slice(1);
+        html += '<div class="section-label">\u00daltimas hist\u00f3rias</div>';
+        html += '<div class="card-grid" id="cardGrid"></div>';
+        if (!pool.length) {
+          html += emptyHTML("Mais hist\u00f3rias aparecer\u00e3o aqui quando forem publicadas.");
+        } else if (pool.length > pageSize) {
+          html += '<div class="load-more-wrap"><button class="share-btn" type="button" id="loadMore">Ver mais</button></div>';
         }
       } else {
-        html += '<div class="card-grid" id="cardGrid">';
-        html += items.map(cardHTML).join("");
+        pool = items;
+        html += '<div class="card-grid" id="cardGrid"></div>';
+        if (pool.length > pageSize) {
+          html += '<div class="load-more-wrap"><button class="share-btn" type="button" id="loadMore">Ver mais</button></div>';
+        }
       }
-      html += "</div>";
-      if (items.length > pageSize + (mode === "home" ? 1 : 0)) {
-        html += '<div class="load-more-wrap"><button class="share-btn" type="button" id="loadMore">Ver más</button></div>';
-      }
+
+      shown = Math.min(pageSize, pool.length);
       root.innerHTML = html;
+      paint();
+
+      const btn = document.getElementById("loadMore");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          shown += pageSize;
+          paint();
+        });
+      }
     })
     .catch(function () {
-      root.innerHTML = '<div class="empty-state">No se pudo cargar el catálogo de artículos.</div>';
+      root.innerHTML = emptyHTML("N\u00e3o foi poss\u00edvel carregar o cat\u00e1logo de artigos.");
     });
 })();

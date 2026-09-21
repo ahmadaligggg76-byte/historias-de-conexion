@@ -1,24 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página no encontrada | Historias de Conexión</title>
-  <link rel="stylesheet" href="/css/site.css">
+  <title>Página não encontrada | Histórias de Conexão</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root { --bg: #fbf5f2; --surface: #fffdfb; --text: #24181b; --muted: #7c686d;
+            --accent: #9f1239; --accent2: #c2415c; --border: rgba(127,29,61,.12); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font-family: Georgia, "Times New Roman", serif; min-height: 100vh;
+           display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .wrap { text-align: center; max-width: 560px; background: var(--surface);
+            border: 1px solid var(--border); border-radius: 30px;
+            padding: clamp(30px, 6vw, 60px); box-shadow: 0 25px 80px rgba(80,25,40,.11); }
+    .eyebrow { display: inline-block; padding: 8px 16px; border-radius: 999px;
+               background: #f6e9e5; border: 1px solid var(--border);
+               font: 700 12px Arial, sans-serif; letter-spacing: 2px; color: var(--accent);
+               margin-bottom: 20px; }
+    h1 { margin: 0 0 14px; font-size: clamp(32px, 6vw, 52px); letter-spacing: -1.5px; line-height: 1.05; }
+    p { color: var(--muted); font: 16px/1.8 Arial, sans-serif; margin: 0 0 26px; }
+    .btn { display: inline-block; text-decoration: none; border: 0; border-radius: 999px;
+           padding: 13px 26px; background: linear-gradient(90deg, var(--accent), var(--accent2));
+           color: #fff; font: 700 14px Arial, sans-serif;
+           box-shadow: 0 12px 30px rgba(159,18,57,.25); }
+    .brand { margin-top: 26px; font: 800 14px Arial, sans-serif; }
+    .brand a { color: inherit; text-decoration: none; }
+    .brand span { background: linear-gradient(90deg, var(--accent), var(--accent2));
+                  -webkit-background-clip: text; background-clip: text; color: transparent; }
+  </style>
 </head>
 <body>
-<header>
-  <div class="nav">
-    <div class="brand"><a href="/">Historias <span>de Conexión</span></a></div>
-  </div>
-</header>
-<main>
-  <section class="hero home-hero">
+  <div class="wrap">
     <div class="eyebrow">404</div>
-    <h1>Esta página no está aquí</h1>
-    <div class="hero-subtitle">Puede que el enlace haya cambiado. Vuelve al inicio para seguir leyendo.</div>
-    <p><a class="share-btn" href="/" style="display:inline-block;text-decoration:none;margin-top:18px">Ir al inicio</a></p>
-  </section>
-</main>
+    <h1>Esta página não está aqui</h1>
+    <p>O link pode ter mudado ou a história foi movida. Volte ao início para continuar lendo.</p>
+    <a class="btn" href="/">Ir ao início</a>
+    <div class="brand"><a href="/">Histórias <span>de Conexão</span></a></div>
+  </div>
 </body>
 </html>
