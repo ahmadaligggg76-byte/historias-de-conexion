@@ -41,6 +41,31 @@
   ],
   "articles": [
     {
+      "id": "hdc-1790017760304",
+      "title": "O Renascimento da Roda: Por que o 'Pagode de Quintal' Virou o Novo Luxo Brasileiro",
+      "slug": "o-renascimento-da-roda-pagode-de-quintal-tendencia",
+      "category": "tendencias",
+      "categoryName": "Tendências",
+      "categorySlug": "tendencias",
+      "excerpt": "Esqueça as superproduções de música eletrônica. O hype agora é o copo americano, o pandeiro na mão e a sensação de estar em casa.",
+      "seoTitle": "A Tendência do Pagode de Quintal e a Estética da Resenha no Brasil",
+      "seoDescription": "Descubra por que a 'resenha' e o pagode de quintal se tornaram a maior tendência de lifestyle no Brasil, unindo nostalgia dos anos 90 e busca por conexão real.",
+      "image": "https://i.ibb.co/wrcJQPjc/file.jpg",
+      "imageAlt": "Grupo de amigos reunidos em uma roda de samba moderna em um terraço urbano ao pôr do sol.",
+      "date": "2026-09-21",
+      "dateDisplay": "21 de set. de 2026",
+      "tags": [
+        "cultura pop",
+        "pagode",
+        "tendências 2024",
+        "lifestyle brasileiro",
+        "comportamento"
+      ],
+      "status": "published",
+      "topicKey": "pagode-quintal-resenha",
+      "source": "n8n"
+    },
+    {
       "id": "hdc-1790017335154",
       "title": "Manual do Amor Tropical: Do Xaveco de Padaria ao Dengo no Forró",
       "slug": "manual-do-amor-tropical-dengo-e-humor",
