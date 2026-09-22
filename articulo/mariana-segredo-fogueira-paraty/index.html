@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB5N03XL0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZB5N03XL0B');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7f1d3d">
+  <style>
+    :root {
+      --bg: #fbf5f2;
+      --surface: #fffdfb;
+      --surface2: #f6e9e5;
+      --text: #24181b;
+      --muted: #7c686d;
+      --border: rgba(127,29,61,.12);
+
+      /* NOVA PALETA */
+      --accent: #9f1239;
+      --accent2: #c2415c;
+      --accent3: #d97706;
+
+      --shadow: 0 25px 80px rgba(80,25,40,.11);
+      --soft-shadow: 0 12px 35px rgba(80,25,40,.08);
+    }
+
+    body.dark {
+      --bg: #120b0e;
+      --surface: #1c1115;
+      --surface2: #29171d;
+      --text: #fff7f5;
+      --muted: #c0aeb3;
+      --border: rgba(255,210,220,.10);
+
+      --accent: #fb7185;
+      --accent2: #f43f5e;
+      --accent3: #f59e0b;
+
+      --shadow: 0 30px 90px rgba(0,0,0,.42);
+      --soft-shadow: 0 15px 40px rgba(0,0,0,.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 5% 0%, rgba(159,18,57,.12), transparent 28%),
+        radial-gradient(circle at 95% 5%, rgba(194,65,92,.10), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(217,119,6,.055), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.9;
+      transition: background .3s ease, color .3s ease;
+    }
+
+    #progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      z-index: 9999;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(255,253,251,.82);
+      border-bottom: 1px solid var(--border);
+    }
+
+    body.dark header {
+      background: rgba(18,11,14,.86);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: auto;
+      min-height: 66px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .brand {
+      font-family: Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: -.5px;
+      font-size: 17px;
+    }
+
+    .brand span {
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .brand a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .cat-bar {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 18px 12px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .cat-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-bar a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+      box-shadow: 0 5px 18px rgba(80,25,40,.04);
+      white-space: nowrap;
+    }
+
+    .cat-bar a:hover,
+    .cat-bar a.active {
+      color: var(--accent);
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 17px;
+      transition: .25s;
+    }
+
+    .icon-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    main {
+      width: 100%;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 72px 20px 30px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 15px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--soft-shadow);
+      font: 700 11px Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      margin-bottom: 23px;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin: 0 auto 20px;
+      font-size: clamp(40px, 7vw, 74px);
+      line-height: 1.03;
+      letter-spacing: -3px;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      font: 16px/1.8 Arial, sans-serif;
+    }
+
+    .story-meta {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .meta-pill {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+      box-shadow: 0 5px 18px rgba(80,25,40,.04);
+    }
+
+    .hero-image-wrap {
+      max-width: 1120px;
+      margin: 18px auto 42px;
+      padding: 0 18px;
+    }
+
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      background: #24181b;
+      box-shadow: 0 30px 90px rgba(80,25,40,.20);
+      border: 1px solid var(--border);
+      aspect-ratio: 1200 / 630;
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(36,24,27,.20)
+      );
+      pointer-events: none;
+    }
+
+    .hero-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .image-caption {
+      margin-top: 11px;
+      text-align: center;
+      color: var(--muted);
+      font: 11px Arial, sans-serif;
+      letter-spacing: .2px;
+    }
+
+    /* =========================
+       ADS — UNCHANGED
+    ========================= */
+
+    .ad-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 38px auto;
+      padding: 0 10px;
+    }
+
+    .ad-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .ad-label {
+      text-align: center;
+      margin-bottom: 9px;
+      color: #999;
+      font: 9px Arial, sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .ad-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .ad-728 {
+      max-width: 728px;
+    }
+
+    .ad-468 {
+      max-width: 468px;
+    }
+
+    .ad-320 {
+      max-width: 320px;
+    }
+
+    .ad-300 {
+      max-width: 300px;
+    }
+
+    .ad-160 {
+      max-width: 160px;
+    }
+
+    .wide-ad-scroll {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: flex;
+      justify-content: center;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .wide-ad-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .native-ad {
+      width: 100%;
+      max-width: 680px;
+      min-height: 120px;
+    }
+
+    .script-ad {
+      width: 100%;
+      max-width: 680px;
+      min-height: 120px;
+    }
+
+    .desktop-skyscraper {
+      min-height: 660px;
+    }
+
+    /* =========================
+       ARTICLE
+    ========================= */
+
+    .article-shell {
+      max-width: 820px;
+      margin: 25px auto 80px;
+      padding: 0 18px;
+    }
+
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: clamp(26px, 6vw, 66px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .story-intro {
+      font-size: 21px;
+      line-height: 1.85;
+    }
+
+    article p {
+      margin: 0 0 25px;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    article p:first-child::first-letter {
+      float: left;
+      font-size: 68px;
+      line-height: .85;
+      padding: 7px 9px 0 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .story-break {
+      width: 58px;
+      height: 4px;
+      margin: 50px auto;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+    }
+
+    .quote-space {
+      margin: 42px -15px;
+      padding: 25px 25px 25px 28px;
+      border-left: 4px solid var(--accent);
+      background: var(--surface2);
+      border-radius: 0 18px 18px 0;
+      box-shadow: 0 10px 30px rgba(80,25,40,.04);
+    }
+
+    .quote-space p {
+      margin: 0;
+      font-style: italic;
+      font-size: 20px;
+    }
+
+    .chapter {
+      margin: 48px 0 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font: 800 11px Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    .chapter::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+
+    .pause {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin: 45px 0;
+    }
+
+    .pause span {
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .end-card {
+      margin-top: 58px;
+      padding: 32px;
+      border-radius: 24px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(159,18,57,.13),
+          rgba(194,65,92,.10),
+          rgba(217,119,6,.07)
+        ),
+        var(--surface2);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .end-card h2 {
+      font-family: Arial, sans-serif;
+      margin: 0 0 10px;
+      font-size: 25px;
+    }
+
+    .end-card p {
+      color: var(--muted);
+      font: 15px/1.7 Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .share-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 21px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: white;
+      font: 700 13px Arial, sans-serif;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(159,18,57,.25);
+      transition: .25s;
+    }
+
+    .share-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .legal-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 18px 70px;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .legal-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 23px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .legal-box h3 {
+      margin: 0 0 10px;
+      font: 800 17px Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .legal-box p {
+      margin: 0;
+      color: var(--muted);
+      font: 13px/1.75 Arial, sans-serif;
+    }
+
+    .legal-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 35px 20px 55px;
+      color: var(--muted);
+      text-align: center;
+      font: 12px/1.8 Arial, sans-serif;
+    }
+
+    .footer-brand {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .cookie-banner {
+      position: fixed;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      max-width: 760px;
+      margin: auto;
+      z-index: 9998;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px 20px;
+      box-shadow: 0 20px 70px rgba(0,0,0,.20);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .cookie-text {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .cookie-text strong {
+      color: var(--text);
+    }
+
+    .cookie-btn {
+      flex-shrink: 0;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 18px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: white;
+      cursor: pointer;
+      font: 700 12px Arial, sans-serif;
+    }
+
+    .cookie-banner.hide {
+      display: none;
+    }
+
+    #topBtn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+      z-index: 900;
+    }
+
+    #topBtn.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media (max-width: 760px) {
+
+      .hero {
+        padding: 52px 16px 25px;
+      }
+
+      h1 {
+        font-size: 40px;
+        letter-spacing: -1.7px;
+      }
+
+      .hero-subtitle {
+        font-size: 14px;
+      }
+
+      .hero-image-wrap {
+        padding: 0 10px;
+        margin-top: 12px;
+        margin-bottom: 32px;
+      }
+
+      .hero-image {
+        border-radius: 21px;
+      }
+
+      .article-shell {
+        padding: 0 9px;
+      }
+
+      article {
+        border-radius: 22px;
+        padding: 25px 19px;
+      }
+
+      article p {
+        font-size: 17px;
+        line-height: 1.86;
+      }
+
+      .story-intro {
+        font-size: 19px;
+      }
+
+      .quote-space {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .ad-wrap {
+        margin: 30px auto;
+      }
+
+      .wide-ad-scroll {
+        justify-content: flex-start;
+      }
+
+      .ad-728 .wide-ad-scroll,
+      .ad-468 .wide-ad-scroll {
+        padding-left: calc((100% - 320px) / 2);
+      }
+
+      .desktop-skyscraper {
+        display: none !important;
+      }
+
+      .legal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cookie-banner {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+
+      .cookie-btn {
+        width: 100%;
+      }
+
+      .end-card {
+        padding: 25px 19px;
+      }
+    }
+
+    @media (max-width: 400px) {
+
+      h1 {
+        font-size: 36px;
+      }
+
+      article {
+        padding: 23px 17px;
+      }
+
+      article p {
+        font-size: 16.5px;
+      }
+    }
+
+    /* =========================
+       GEO: summary + FAQ
+    ========================= */
+    .summary-box {
+      max-width: 760px;
+      margin: 26px auto 0;
+      padding: 20px 24px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 18px 18px 0;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .summary-box strong {
+      display: block;
+      font: 800 12px Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .summary-box p {
+      margin: 0;
+      font: 15px/1.8 Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .faq {
+      margin: 38px 0 8px;
+      padding: 26px 26px 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .faq h2 {
+      margin: 0 0 6px;
+      font-size: 24px;
+      letter-spacing: -.5px;
+    }
+
+    .faq-item {
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item:first-of-type {
+      border-top: 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font: 700 16px/1.5 Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .faq-item p {
+      margin: 0;
+      font: 14.5px/1.75 Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .breadcrumb {
+      margin: 14px 0 0;
+      font: 12.5px/1.6 Arial, sans-serif;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    .follow-google {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font: 13px/1.5 Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .related { margin: 40px 0 10px; }
+    .related h2 {
+      font-size: 22px;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    .related-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--soft-shadow);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .related-card div { padding: 12px 14px; }
+    .related-card strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .related-card small { color: var(--muted); font-size: 12px; }
+  </style>
+
+  <title>Mariana e o segredo da fogueira de Paraty: revelação que mudou tudo</title>
+  <meta name="description" content="Descubra como a fogueira de São João em Paraty trouxe à tona um segredo de amor antigo. Uma história real de coragem, música e reencontro que vai tocar seu coração.">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preload" as="image" href="https://i.ibb.co/DDkqfQvn/file.jpg" fetchpriority="high">
+  <link rel="canonical" href="https://historias-de-conexion-omega.vercel.app/articulo/mariana-segredo-fogueira-paraty/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Mariana e o segredo da fogueira de Paraty: revelação que mudou tudo">
+  <meta property="og:description" content="Descubra como a fogueira de São João em Paraty trouxe à tona um segredo de amor antigo. Uma história real de coragem, música e reencontro que vai tocar seu coração.">
+  <meta property="og:image" content="https://i.ibb.co/DDkqfQvn/file.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://i.ibb.co/DDkqfQvn/file.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Mariana e o segredo da fogueira de Paraty: revelação que mudou tudo","description":"Descubra como a fogueira de São João em Paraty trouxe à tona um segredo de amor antigo. Uma história real de coragem, música e reencontro que vai tocar seu coração.","image":"https://i.ibb.co/DDkqfQvn/file.jpg","inLanguage":"pt-BR","author":{"@type":"Organization","name":"Histórias de Conexão","url":"https://historias-de-conexion-omega.vercel.app/equipe/"},"publisher":{"@type":"Organization","name":"Histórias de Conexão"},"mainEntityOfPage":"https://historias-de-conexion-omega.vercel.app/articulo/mariana-segredo-fogueira-paraty/","datePublished":"2026-09-22"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://historias-de-conexion-omega.vercel.app/"},{"@type":"ListItem","position":2,"name":"Histórias da Vida Real","item":"https://historias-de-conexion-omega.vercel.app/categoria/historias-de-la-vida-real/"},{"@type":"ListItem","position":3,"name":"Mariana e o segredo da fogueira de Paraty: revelação que mudou tudo"}]}]}
+</script>
+<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+</head>
+<body>
+<div id="progress"></div>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <a href="/">Histórias <span>de Conexão</span></a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Mudar tema" title="Mudar tema">☾</button>
+      <button class="icon-btn" id="shareTop" aria-label="Compartilhar" title="Compartilhar">↗</button>
+    </div>
+  </div>
+
+<div class="cat-bar">
+<a href="/">Início</a>
+<a href="/categoria/historias-de-la-vida-real/">Histórias da Vida Real</a>
+<a href="/categoria/consejos-de-citas/">Dicas de Encontros</a>
+<a href="/categoria/metas-de-pareja/">Metas de Casal</a>
+<a href="/categoria/noticias-18/">Notícias 18+</a>
+<a href="/categoria/tendencias/">Tendências</a>
+<a href="/categoria/entretenimiento/">Entretenimento e Frases</a>
+</div>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow">♥ Histórias da Vida Real</div>
+  <h1>Mariana e o segredo da fogueira de Paraty: o que ela escondeu?</h1>
+  <div class="hero-subtitle">Na noite de São João, a fogueira de Paraty iluminou mais que o céu. O que Mariana guardava no peito mudaria tudo.</div>
+  <div class="story-meta">
+    <span class="meta-pill">♥ Histórias da Vida Real</span>
+    <span class="meta-pill">22 de set. de 2026</span>
+    <span class="meta-pill">✍️ Por <a href="/equipe/" style="color:inherit;text-decoration:underline">Equipe Histórias de Conexão</a></span>
+  </div>
+  <nav class="breadcrumb" aria-label="Navegação">
+    <a href="/">Início</a> <span>›</span> <a href="/categoria/historias-de-la-vida-real/">Histórias da Vida Real</a> <span>›</span> <span>Mariana e o segredo da fogueira de Paraty: o que ela escondeu?</span>
+  </nav>
+</section>
+<div class="hero-image-wrap">
+  <div class="hero-image">
+    <img src="https://i.ibb.co/DDkqfQvn/file.jpg" alt="Mariana segurando um violão antigo ao lado de uma fogueira na praia de Paraty, com luz de lanternas ao fundo." width="1200" height="630" loading="eager" fetchpriority="high">
+  </div>
+  <div class="image-caption">Na noite de São João, a fogueira de Paraty iluminou mais que o céu. O que Mariana guardava no peito mudaria tudo.</div>
+</div>
+
+<div class="summary-box" id="summaryBox">
+  <strong>Resumo</strong>
+  <p></p>
+</div>
+
+<div class="ad-wrap">
+  <div class="ad-section ad-728">
+    <div class="ad-label">Conteúdo patrocinado</div>
+    <div class="wide-ad-scroll">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key' : 'f10e34f0b71b6ed505bc5a3326f5382c',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://accedelid.com/f10e34f0b71b6ed505bc5a3326f5382c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-shell">
+<article id="story">
+<p>A fumaça da fogueira subia devagar, envolvendo o ar com cheiro de madeira molhada, enquanto Mariana segurava o violão do avô, o coração batendo como tamborim em pleno São João. Os risos das crianças ecoavam ao redor, mas seus olhos fixos naquele homem que acabara de chegar do Rio, traziam uma pergunta que ela ainda não ousava responder.</p>
+<p>Você já sentiu o medo de revelar um sentimento que parece estar guardado a sete chaves? Mariana sabia que o segredo que carregava — estar apaixonada por seu melhor amigo de infância, Rafael, que voltara depois de dez anos na capital — podia transformar a amizade em algo irreversível. Ela decidiu que, antes que a fogueira apagasse, precisava tocar a música que o avô lhe ensinou, como um jeito de dizer tudo sem dizer nada.</p>
+<p>Mas por que a fogueira parecia atrair olhares curiosos? O que o velho violão de seu avô tem a ver com a história? E como o Carnaval que se aproximava poderia mudar tudo?</p>
+<div class="chapter">Capítulo 1 – O retorno inesperado</div>
+<p>Rafael chegou ao cais de Paraty ao entardecer, com a mala cheia de roupas de algodão e o sorriso de quem ainda guardava a saudade do velho bairro de pedra. Ao avistar Mariana, o tempo pareceu parar.</p>
+<p><strong>“Cara, não acredito que você ainda tem esse violão,”</strong> brincou Rafael, puxando o braço da amiga.</p>
+<p>Mariana riu, mas o som da sua risada se misturou ao farfalhar das folhas de bananeira.</p>
+<p>— <em>É o mesmo que o avô usava nas festas de São João. Ele dizia que a música tem o poder de contar histórias sem palavras.</em></p>
+<div class="quote-space"><p>“Quando a melodia nasce do coração, até a fogueira parece dançar.” – ditado da avó de Mariana</p></div>
+<div class="chapter">Capítulo 2 – O primeiro acorde</div>
+<p>Com a fogueira ao fundo, Mariana posicionou o violão sobre o colo e começou a tocar "Asa Branca". Cada nota parecia puxar um fio invisível entre eles.</p>
+<p>— <em>Rafa, lembra quando a gente corria pela rua da Praia Grande, fingindo ser cantores de rádio?</em> – sussurrou ela, quase sem perceber que a voz tremia.</p>
+<p>Rafael sorriu, mas seus olhos mostravam a mesma inquietação que a de Mariana.</p>
+<p>— <em>Claro. E você ainda era a rainha da cantoria.</em></p>
+<p>O som da viola, o cheiro de milho assado e o calor da brasa criavam um cenário tão brasileiro que parecia um filme de Jorge Amado.</p>
+<div class="chapter">Capítulo 3 – A provocação do passado</div>
+<p>Enquanto a música seguia, o velho senhor da esquina, conhecido como Zé da Laje, aproximou‑se com um copo de quentão.</p>
+<p>— <em>Vocês dois ainda tão de namoro? Ou é só o fogo que tá quente?</em> – provocou, piscando.</p>
+<p>Mariana mordeu o lábio, sentindo o rubor subir.</p>
+<p>— <em>Não, Zé. Só a fogueira que tá quente.</em> – respondeu, tentando disfarçar.</p>
+<p>Rafael riu, mas o brilho nos olhos dele mudou. Ele percebeu que o segredo de Mariana não era só a música.</p>
+<div class="chapter">Capítulo 4 – A confissão na madrugada</div>
+<p>Quando a festa terminou, a praia ficou vazia, exceto por eles dois, a lua refletindo na água como prata líquida. Mariana sentou‑se na areia, ainda com o violão ao lado.</p>
+<p>— <em>Rafa, eu preciso te contar uma coisa…</em> – começou, a voz baixa como o sussurro das ondas.</p>
+<p>Rafael se aproximou, sentindo a brisa fria do inverno de junho que chega ao litoral.</p>
+<p>— <em>Eu te escuto.</em></p>
+<p>Ela respirou fundo, sentindo o cheiro de maresia misturado ao perfume de flor de ipê que o vento trazia da mata.</p>
+<p>— <strong>Eu ainda sinto o mesmo de quando éramos crianças, mas agora é diferente. Eu te amo.</strong> — disse, com o coração batendo como um pandeiro.</p>
+<p>Rafael ficou em silêncio por um instante que pareceu durar uma eternidade.</p>
+<p>— <em>Mariana… eu também guardei isso. Quando voltei, pensei que fosse só saudade. Mas a cada passo que dou aqui, percebo que o que eu sinto é mais forte que o tempo.</em></p>
+<p>O som das ondas foi a trilha sonora da revelação.</p>
+<div class="takeaway-box"><p><strong>O que levar desta história:</strong> Quando o medo de perder a amizade impede a verdade, a coragem de falar pode transformar o medo em um novo começo. Não espere a fogueira apagar para dizer o que sente.</p></div>
+<div class="chapter">Capítulo 5 – O Carnaval que chegou</div>
+<p>Com a revelação, o clima de São João deu lugar ao brilho colorido do Carnaval de Paraty. As ruas se encheram de confete, de blocos de frevo e de sorrisos.</p>
+<p>Rafael, agora de fantasia de marinheiro, puxou Mariana para o meio da multidão.</p>
+<p>— <em>Vamos fazer essa festa juntos?</em> – gritou, enquanto ela gargalhava, sentindo a energia contagiante.</p>
+<p>Mas a alegria trazia também um novo dilema: o antigo namorado de Mariana, André, aparecia na festa, ainda carregando a esperança de reconquistar o coração dela.</p>
+<p>— <em>Mariana, ainda sinto…</em> – começou ele, mas a música do bloco já abafava suas palavras.</p>
+<p>Mariana percebeu que, ao escolher abrir seu coração para Rafael, ela também precisava definir o que faria com o passado que ainda rondava.</p>
+<div class="psych-box"><p><strong>O que a psicologia diz:</strong> Estudos mostram que revelar sentimentos íntimos aumenta a sensação de intimidade e diminui a ansiedade social, fortalecendo vínculos duradouros.</p></div>
+<div class="chapter">Capítulo 6 – O fim da festa, o início de um caminho</div>
+<p>Quando o último acorde do samba-enredo ecoou, a multidão começou a se dispersar. Mariana e Rafael caminharam de mãos dadas pela orla iluminada por lanternas.</p>
+<p>— <em>Eu não sei o que o futuro reserva, mas sei que quero descobrir ao seu lado.</em> – disse Rafael, apertando a mão dela.</p>
+<p>Mariana sorriu, sentindo o coração leve como o vento que balança as palmeiras.</p>
+<p>— <em>Então vamos construir nossa própria melodia.</em></p>
+<p>E assim, entre o som das ondas e o cheiro de churrasco de domingo que ainda pairava no ar, eles selaram um novo capítulo, provando que o amor pode nascer da coragem de se mostrar vulnerável.</p>
+<p><strong>Segundo o IBGE, Paraty recebe cerca de 300 mil turistas por ano, o que faz do seu São João e Carnaval momentos ainda mais intensos para quem busca histórias reais.</strong></p>
+<section class="faq" id="faqSection" aria-label="Perguntas frequentes">
+  <h2>Perguntas frequentes</h2>
+
+</section>
+<div class="end-card">
+  <h2>Essa história mexeu com você?</h2>
+  <p>E se você estivesse no lugar de Mariana, qual seria a primeira palavra que você diria ao revelar seu segredo? Amanhã: a carta que ela nunca enviou.</p>
+  <button class="share-btn" id="shareBtn">Compartilhar esta história ↗</button>
+  <div class="follow-google">
+    <span>Siga o Histórias de Conexão no Google</span>
+    <div google-add-preferred-source-btn></div>
+  </div>
+</div>
+<section class="related" id="relatedSection" aria-label="Continue lendo">
+  <h2>Continue lendo</h2>
+  <div class="related-grid">
+<a class="related-card" href="/articulo/el-lenguaje-secreto-de-los-balcones/"><img src="https://i.ibb.co/zHbPwssP/file.jpg" alt="A linguagem secreta das varandas: história real de conexão" loading="lazy" width="640" height="360"><div><small>Histórias da Vida Real</small><strong>A linguagem secreta das varandas</strong></div></a>
+<a class="related-card" href="/articulo/le-escribi-estas-bien/"><img src="/images/valeria-story.jpg" alt="Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos | Histórias de Conexão" loading="lazy" width="640" height="360"><div><small>Histórias da Vida Real</small><strong>Escrevi “você está bem?” e me arrependi de olhar o celular a cada cinco minutos</strong></div></a>
+<a class="related-card" href="/articulo/o-segredo-obscuro-dos-algoritmos-de-namoro/"><img src="https://i.ibb.co/ksdqqjT3/file.jpg" alt="O Segredo dos Algoritmos de Namoro e a Solidão Digital" loading="lazy" width="640" height="360"><div><small>Notícias 18+</small><strong>O segredo obscuro dos algoritmos de namoro que ninguém te conta (e como eles lucram com sua solidão)</strong></div></a>
+  </div>
+</section>
+</article>
+</div>
+
+<div class="ad-wrap">
+  <div class="ad-section ad-300">
+    <div class="ad-label">Conteúdo patrocinado</div>
+    <div class="ad-box">
+      <script>
+        atOptions = {
+          'key' : 'b48302e270e7c32d0f8275a29268b922',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://accedelid.com/b48302e270e7c32d0f8275a29268b922/invoke.js"></script>
+    </div>
+  </div>
+</div>
+
+
+<div class="ad-wrap">
+  <div class="ad-section ad-728">
+    <div class="ad-label">Conteúdo patrocinado</div>
+    <div class="wide-ad-scroll">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key' : 'f10e34f0b71b6ed505bc5a3326f5382c',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://accedelid.com/f10e34f0b71b6ed505bc5a3326f5382c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer>
+  <div class="footer-brand">Histórias de Conexão</div>
+  <div>Histórias sobre relacionamentos, encontros, emoções e conexões humanas.</div>
+  <div class="footer-links">
+    <a href="/">Início</a>
+    <a href="/#privacy">Privacidade</a>
+    <a href="/#contact">Contato</a>
+  </div>
+  <div>© 2026 Histórias de Conexão. Todos os direitos reservados.</div>
+</footer>
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text"><strong>🍪 Sua privacidade importa.</strong><br>Utilizamos cookies e tecnologias semelhantes para melhorar sua experiência.</div>
+  <button class="cookie-btn" id="cookieAccept">Aceitar</button>
+</div>
+<button id="topBtn" aria-label="Voltar ao topo">↑</button>
+
+<script>
+
+  /* =========================
+     THEME
+  ========================= */
+
+  const themeBtn =
+    document.getElementById("themeBtn");
+
+  const savedTheme =
+    localStorage.getItem("story-theme");
+
+  if (savedTheme === "dark") {
+
+    document.body.classList.add("dark");
+
+    themeBtn.textContent = "☀";
+
+  }
+
+
+  themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    const dark =
+      document.body.classList.contains("dark");
+
+    localStorage.setItem(
+      "story-theme",
+      dark ? "dark" : "light"
+    );
+
+    themeBtn.textContent =
+      dark ? "☀" : "☾";
+
+  });
+
+
+  /* =========================
+     SCROLL PROGRESS
+  ========================= */
+
+  const progressBar =
+    document.getElementById("progress");
+
+  const topBtn =
+    document.getElementById("topBtn");
+
+
+  window.addEventListener("scroll", () => {
+
+    const scrollTop =
+      window.scrollY;
+
+    const height =
+      document.documentElement.scrollHeight -
+      window.innerHeight;
+
+    const progress =
+      height > 0
+        ? (scrollTop / height) * 100
+        : 0;
+
+    progressBar.style.width =
+      progress + "%";
+
+
+    if (scrollTop > 500) {
+
+      topBtn.classList.add("show");
+
+    } else {
+
+      topBtn.classList.remove("show");
+
+    }
+
+  });
+
+
+  /* =========================
+     BACK TO TOP
+  ========================= */
+
+  topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+
+  /* =========================
+     SHARE
+  ========================= */
+
+  async function shareStory() {
+
+    const shareData = {
+
+      title:
+        "Mariana e o segredo da fogueira de Paraty: revelação que mudou tudo",
+
+      text:
+        "Descubra como a fogueira de São João em Paraty trouxe à tona um segredo de amor antigo. Uma história real de coragem, música e reencontro que vai tocar seu coração.",
+
+      url:
+        window.location.href
+
+    };
+
+
+    try {
+
+      if (navigator.share) {
+
+        await navigator.share(
+          shareData
+        );
+
+      } else if (navigator.clipboard) {
+
+        await navigator.clipboard.writeText(
+          window.location.href
+        );
+
+        alert(
+          "Link copiado."
+        );
+
+      } else {
+
+        alert(
+          "Copie o link desta página para compartilhar."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.log(
+        "Share cancelled"
+      );
+
+    }
+
+  }
+
+
+  document
+    .getElementById("shareBtn")
+    .addEventListener(
+      "click",
+      shareStory
+    );
+
+
+  document
+    .getElementById("shareTop")
+    .addEventListener(
+      "click",
+      shareStory
+    );
+
+
+  /* =========================
+     COOKIE NOTICE
+  ========================= */
+
+  const cookieBanner =
+    document.getElementById("cookieBanner");
+
+  const cookieAccept =
+    document.getElementById("cookieAccept");
+
+  const cookieSaved =
+    localStorage.getItem("cookie-consent");
+
+
+  if (cookieSaved === "accepted") {
+
+    cookieBanner.classList.add("hide");
+
+  }
+
+
+  cookieAccept.addEventListener("click", () => {
+
+    localStorage.setItem(
+      "cookie-consent",
+      "accepted"
+    );
+
+    cookieBanner.classList.add("hide");
+
+  });
+
+
+  /* =========================
+     GEO: hide empty or unfilled blocks
+     (safety net in case a placeholder was not filled)
+  ========================= */
+
+  (function geoCleanup() {
+
+    var summaryBox =
+      document.getElementById("summaryBox");
+
+    if (summaryBox) {
+
+      var summaryP =
+        summaryBox.querySelector("p");
+
+      var summaryText =
+        summaryP ? summaryP.textContent.trim() : "";
+
+      if (
+        !summaryText ||
+        summaryText.indexOf("{{") !== -1
+      ) {
+
+        summaryBox.remove();
+
+      }
+
+    }
+
+    var faqSection =
+      document.getElementById("faqSection");
+
+    if (faqSection) {
+
+      var hasItems =
+        faqSection.querySelector(".faq-item");
+
+      var faqText =
+        faqSection.textContent || "";
+
+      if (
+        !hasItems ||
+        faqText.indexOf("{{") !== -1
+      ) {
+
+        faqSection.remove();
+
+      }
+
+    }
+
+  })();
+
+</script>
+</body>
+</html>
